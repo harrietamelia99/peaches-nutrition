@@ -135,19 +135,26 @@ const includedItems = [
 
 const testimonials = [
   {
+    name: "Sara",
     quote:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    name: "Client Name",
+      "More than a coach, Jem has become a friend for life. If you're stuck in extremes, convinced nothing will work for you, or afraid to be honest about your relationship with food, I couldn't recommend her more.",
+    decor: "strawberry" as const,
   },
   {
+    name: "Lianne",
     quote:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    name: "Client Name",
+      "Instead of just giving me another plan, Jem helped me understand what was actually driving my behaviours. We went to the root cause of my triggers in a way I'd never experienced before.",
   },
   {
+    name: "Emma",
     quote:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    name: "Client Name",
+      "I never once felt judged. I could be fully myself and completely honest with her, there was never a moment where I felt like I had to hold something back.",
+    decor: "gold-heart" as const,
+  },
+  {
+    name: "Jade",
+    quote:
+      "I was honestly so skeptical going into this. I thought a lot of this stuff was bullsh*t. But Jem completely changed my perspective. She's warm, kind, and feels like sunshine in a cup.",
   },
 ];
 
@@ -588,19 +595,37 @@ export default function PeachClubPage() {
               />
             </h2>
           </div>
-          <div className="grid gap-4 md:grid-cols-3">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {testimonials.map((t, i) => (
               <div
-                key={t.quote}
-                className="card-white hover-lift reveal flex flex-col"
+                key={t.name}
+                className="card-white hover-lift reveal relative flex flex-col"
                 data-reveal
                 data-reveal-delay={String(i * 120)}
               >
                 <Stars />
-                <p className="mb-5 flex-1 text-[14px] leading-[1.7] text-peach-text">
-                  &ldquo;{t.quote}&rdquo;
+                <p className="mb-3 font-serif text-[1.1rem] font-semibold text-peach-charcoal">
+                  {t.name}
                 </p>
-                <p className="text-[13px] text-peach-text/60">— {t.name}</p>
+                <p className="mb-5 flex-1 text-[14px] leading-[1.7] text-peach-text">
+                  {t.quote}
+                </p>
+                <span className="btn-brand-berry-full mt-auto">read more</span>
+                {t.decor === "strawberry" && (
+                  <DecorEmoji
+                    emoji="🍓"
+                    size="sm"
+                    tilt="right"
+                    className="pointer-events-none absolute bottom-16 right-4"
+                  />
+                )}
+                {t.decor === "gold-heart" && (
+                  <GoldHeart
+                    size={28}
+                    tilt="right"
+                    className="pointer-events-none absolute bottom-14 right-4"
+                  />
+                )}
               </div>
             ))}
           </div>
