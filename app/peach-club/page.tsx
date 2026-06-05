@@ -544,18 +544,7 @@ export default function PeachClubPage() {
       </section>
 
       {/* ── 7. Testimonials ─────────────────────────────────────────── */}
-      <section className="section-band relative bg-peach-3">
-        <DecorEmoji
-          emoji="🍓"
-          size="md"
-          tilt="left"
-          className="pointer-events-none absolute bottom-6 left-8 hidden md:block"
-        />
-        <GoldHeart
-          size={56}
-          tilt="right"
-          className="pointer-events-none absolute bottom-6 right-8 hidden md:block"
-        />
+      <section className="section-band bg-peach-3">
         <div className="section-pad mx-auto max-w-page">
           <div className="reveal section-head text-center" data-reveal>
             <p className="section-label mb-4">Client Testimonials</p>
