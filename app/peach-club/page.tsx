@@ -376,13 +376,19 @@ export default function PeachClubPage() {
             </a>
           </div>
         </div>
-        <PlaceholderImage
-          fileName="hero-photo.jpg"
-          sectionLabel="Section 1 — Hero image"
-          aspectClass="hero-reveal-right aspect-[4/5] w-full min-h-[50vh] lg:aspect-auto lg:h-full lg:min-h-0"
-          className="lg:rounded-none lg:border-l lg:border-t-0 lg:border-r-0 lg:border-b-0"
-          heroDelay="260ms"
-        />
+        <div
+          className="hero-reveal-right relative aspect-[4/5] w-full min-h-[50vh] overflow-hidden border lg:aspect-auto lg:h-full lg:min-h-0 lg:rounded-none lg:border-l lg:border-t-0 lg:border-r-0 lg:border-b-0"
+          style={{ "--hero-delay": "260ms" } as CSSProperties}
+        >
+          <Image
+            src="/images/hero-photo.jpg"
+            alt="Woman in activewear smiling in a cosy living space"
+            fill
+            className="object-cover"
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            priority
+          />
+        </div>
       </section>
 
       {/* ── 2. Introducing the Programme ────────────────────────────── */}
