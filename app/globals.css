@@ -340,8 +340,8 @@
   }
 
   .pricing-card {
-    @apply hover-lift relative flex h-full flex-col overflow-visible rounded-card bg-white p-6 md:p-7;
-    border: none;
+    @apply hover-lift relative flex h-full flex-col overflow-visible rounded-card border bg-white p-6 md:p-7;
+    border-color: var(--border);
     box-shadow: none;
     color: var(--cta-text);
   }
@@ -356,6 +356,12 @@
   .emoji-decor {
     filter: drop-shadow(3px 5px 6px rgba(43, 43, 43, 0.28));
     transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .emoji-inline {
+    display: inline-block;
+    vertical-align: -0.12em;
+    margin-left: 0.2rem;
   }
 
   .gold-heart-decor {

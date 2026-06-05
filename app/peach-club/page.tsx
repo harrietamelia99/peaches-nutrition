@@ -403,9 +403,14 @@ export default function PeachClubPage() {
         <div className="section-pad mx-auto max-w-page">
           <div className="reveal section-head text-center" data-reveal>
             <p className="section-label mb-4">Is This You?</p>
-            <h2 className="heading-display flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-[clamp(1.75rem,3.5vw,2.5rem)]">
-              <span>you&apos;re not alone. we see you.</span>
-              <DecorEmoji emoji="💬" size="md" tilt="slight-right" />
+            <h2 className="heading-display text-center text-[clamp(1.75rem,3.5vw,2.5rem)]">
+              you&apos;re not alone. we see you.{" "}
+              <DecorEmoji
+                emoji="💬"
+                size="sm"
+                tilt="slight-right"
+                className="emoji-inline"
+              />
             </h2>
           </div>
           <div
@@ -432,9 +437,9 @@ export default function PeachClubPage() {
         <div className="section-pad mx-auto max-w-page">
           <div className="reveal section-head text-center" data-reveal>
             <p className="section-label mb-4">The Method</p>
-            <h2 className="heading-display flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-[clamp(1.75rem,3.5vw,2.5rem)] text-white">
-              <span>four pillars. one you.</span>
-              <DecorEmoji emoji="✨" size="md" tilt="right" />
+            <h2 className="heading-display text-center text-[clamp(1.75rem,3.5vw,2.5rem)] text-white">
+              four pillars. one you.{" "}
+              <DecorEmoji emoji="✨" size="sm" tilt="right" className="emoji-inline" />
             </h2>
           </div>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5">
@@ -473,9 +478,14 @@ export default function PeachClubPage() {
             <p className="section-label">The 6-Week Journey</p>
             <h2 className="heading-display text-[clamp(2rem,4vw,3.1rem)] leading-[1.12]">
               <span className="block">Your story</span>
-              <span className="mt-0.5 flex flex-wrap items-center gap-x-2">
-                <span>starts here.</span>
-                <DecorEmoji emoji="💬" size="md" tilt="slight-right" />
+              <span className="mt-0.5 block">
+                starts here.{" "}
+                <DecorEmoji
+                  emoji="💬"
+                  size="sm"
+                  tilt="slight-right"
+                  className="emoji-inline"
+                />
               </span>
             </h2>
           </div>
@@ -521,9 +531,9 @@ export default function PeachClubPage() {
             <div className="sm:col-span-2 md:col-span-1 md:col-start-1 md:row-start-2">
               <h2 className="heading-display text-[clamp(1.75rem,3.2vw,2.5rem)] leading-[1.15]">
                 <span className="block">Everything you</span>
-                <span className="mt-0.5 flex flex-wrap items-center gap-x-2">
-                  <span>need to succeed.</span>
-                  <DecorEmoji emoji="✨" size="sm" tilt="right" />
+                <span className="mt-0.5 block">
+                  need to succeed.{" "}
+                  <DecorEmoji emoji="✨" size="sm" tilt="right" className="emoji-inline" />
                 </span>
               </h2>
             </div>
@@ -548,9 +558,14 @@ export default function PeachClubPage() {
         <div className="section-pad mx-auto max-w-page">
           <div className="reveal section-head text-center" data-reveal>
             <p className="section-label mb-4">Client Testimonials</p>
-            <h2 className="heading-display flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-[clamp(1.75rem,3.5vw,2.5rem)]">
-              <span>don&apos;t just take our word for it</span>
-              <DecorEmoji emoji="💬" size="md" tilt="slight-right" />
+            <h2 className="heading-display text-center text-[clamp(1.75rem,3.5vw,2.5rem)]">
+              don&apos;t just take our word for it{" "}
+              <DecorEmoji
+                emoji="💬"
+                size="sm"
+                tilt="slight-right"
+                className="emoji-inline"
+              />
             </h2>
           </div>
           <div className="grid gap-4 md:grid-cols-3">
@@ -578,75 +593,74 @@ export default function PeachClubPage() {
         className="section-band section-berry-band"
       >
         <div className="section-pad mx-auto max-w-page">
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:items-stretch lg:gap-x-10 xl:gap-x-12">
+          <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[1fr_auto_1fr] lg:gap-x-10 xl:gap-x-14">
             <div
-              className="reveal flex flex-col gap-4 sm:col-span-2 lg:col-span-1 lg:max-w-[17rem] lg:self-center"
+              className="reveal flex flex-col items-center justify-center gap-4 text-center lg:max-w-[15rem] lg:items-start lg:justify-self-end lg:pr-2 lg:text-left"
               data-reveal
             >
               <p className="section-label-gold">Invest in You</p>
-              <h2 className="berry-heading font-serif text-[clamp(1.5rem,2.4vw,2.15rem)] font-medium leading-[1.22]">
-                a small investment for a lifetime of change.
+              <h2 className="berry-heading font-serif text-[clamp(1.45rem,2.2vw,2rem)] font-medium leading-[1.22]">
+                a small investment for a lifetime of change.{" "}
+                <DecorEmoji emoji="✨" size="sm" tilt="right" className="emoji-inline" />
               </h2>
-              <div className="flex flex-col gap-2">
-                <DecorEmoji emoji="✨" size="md" tilt="right" />
-                <DecorEmoji emoji="🧁" size="md" tilt="left" />
-              </div>
             </div>
 
-            <div className="pricing-card reveal" data-reveal data-reveal-delay="100">
-              <span className="save-badge">
-                Save
-                <br />
-                £20
-              </span>
-              <div className="max-w-[calc(100%-3.5rem)]">
+            <div className="grid w-full max-w-[34rem] gap-4 sm:grid-cols-2 sm:gap-5 lg:w-auto">
+              <div className="pricing-card reveal" data-reveal data-reveal-delay="100">
+                <span className="save-badge">
+                  Save
+                  <br />
+                  £20
+                </span>
+                <div className="max-w-[calc(100%-3.5rem)]">
+                  <p className="mb-1 font-sans text-[11px] font-medium uppercase tracking-[0.15em] text-peach-dot">
+                    Early Bird
+                  </p>
+                  <p className="mb-4 text-[13px] text-peach-text/60">
+                    Limited to first 5 spaces
+                  </p>
+                </div>
+                <p className="price-display mb-5">£147</p>
+                <ul className="mb-6 flex flex-col gap-2.5">
+                  {pricingFeatures.map((f) => (
+                    <CheckItem key={`early-${f}`}>{f}</CheckItem>
+                  ))}
+                </ul>
+                <a href="#payment" className="btn-brand-berry-full mt-auto">
+                  join now
+                </a>
+              </div>
+
+              <div className="pricing-card reveal" data-reveal data-reveal-delay="200">
                 <p className="mb-1 font-sans text-[11px] font-medium uppercase tracking-[0.15em] text-peach-dot">
-                  Early Bird
+                  Standard
                 </p>
                 <p className="mb-4 text-[13px] text-peach-text/60">
-                  Limited to first 5 spaces
+                  Regular Price
                 </p>
+                <p className="price-display mb-5">£167</p>
+                <ul className="mb-6 flex flex-col gap-2.5">
+                  {pricingFeatures.map((f) => (
+                    <CheckItem key={`std-${f}`}>{f}</CheckItem>
+                  ))}
+                </ul>
+                <a href="#payment" className="btn-brand-berry-full mt-auto">
+                  join now
+                </a>
               </div>
-              <p className="price-display mb-5">£147</p>
-              <ul className="mb-6 flex flex-col gap-2.5">
-                {pricingFeatures.map((f) => (
-                  <CheckItem key={`early-${f}`}>{f}</CheckItem>
-                ))}
-              </ul>
-              <a href="#payment" className="btn-brand-berry-full mt-auto">
-                join now
-              </a>
-            </div>
-
-            <div className="pricing-card reveal" data-reveal data-reveal-delay="200">
-              <p className="mb-1 font-sans text-[11px] font-medium uppercase tracking-[0.15em] text-peach-dot">
-                Standard
-              </p>
-              <p className="mb-4 text-[13px] text-peach-text/60">
-                Regular Price
-              </p>
-              <p className="price-display mb-5">£167</p>
-              <ul className="mb-6 flex flex-col gap-2.5">
-                {pricingFeatures.map((f) => (
-                  <CheckItem key={`std-${f}`}>{f}</CheckItem>
-                ))}
-              </ul>
-              <a href="#payment" className="btn-brand-berry-full mt-auto">
-                join now
-              </a>
             </div>
 
             <div
-              className="reveal flex flex-col gap-5 sm:col-span-2 lg:col-span-1 lg:max-w-[15rem] lg:self-center"
+              className="reveal flex flex-col items-center justify-center gap-4 text-center lg:max-w-[15rem] lg:items-start lg:justify-self-start lg:pl-2 lg:text-left"
               data-reveal
               data-reveal-delay="300"
             >
-              <p className="berry-body font-serif text-[clamp(1.85rem,3vw,2.85rem)] font-medium leading-[1.12]">
+              <p className="berry-body font-serif text-[clamp(1.65rem,2.8vw,2.65rem)] font-medium leading-[1.12]">
                 you can sit with us
               </p>
-              <div className="flex items-center gap-3">
-                <DecorEmoji emoji="💖" size="md" tilt="slight-left" />
-                <DecorEmoji emoji="🍑" size="md" tilt="right" />
+              <div className="flex items-center justify-center gap-3 lg:justify-start">
+                <DecorEmoji emoji="💖" size="sm" tilt="slight-left" />
+                <DecorEmoji emoji="🍑" size="sm" tilt="right" />
               </div>
             </div>
           </div>
@@ -660,11 +674,9 @@ export default function PeachClubPage() {
             className="reveal mx-auto flex max-w-2xl flex-col items-center px-2 text-center"
             data-reveal
           >
-            <h2 className="heading-display text-[clamp(1.85rem,3.8vw,2.85rem)] leading-[1.12]">
-              <span className="flex flex-wrap items-center justify-center gap-x-2 gap-y-1">
-                ready to rewrite your story?
-                <DecorEmoji emoji="✨" size="sm" tilt="right" />
-              </span>
+            <h2 className="heading-display text-center text-[clamp(1.85rem,3.8vw,2.85rem)] leading-[1.12]">
+              ready to rewrite your story?{" "}
+              <DecorEmoji emoji="✨" size="sm" tilt="right" className="emoji-inline" />
             </h2>
             <p className="mt-5 max-w-lg text-[15px] leading-[1.75] text-peach-text">
               You deserve to feel good in your body, your mind, and your life.
@@ -675,9 +687,14 @@ export default function PeachClubPage() {
                 Join now
                 <GoldHeart size={32} tilt="right" />
               </a>
-              <p className="flex items-center justify-center gap-2 font-serif text-[15px] text-peach-text/70">
-                Your story is waiting.
-                <DecorEmoji emoji="💬" size="sm" tilt="slight-right" />
+              <p className="text-center font-serif text-[15px] text-peach-text/70">
+                Your story is waiting.{" "}
+                <DecorEmoji
+                  emoji="💬"
+                  size="sm"
+                  tilt="slight-right"
+                  className="emoji-inline"
+                />
               </p>
             </div>
           </div>
