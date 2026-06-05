@@ -419,11 +419,18 @@ export default function PeachClubPage() {
               and the habits you practise every day.
             </p>
           </div>
-          <PlaceholderImage
-            fileName="programme-photo.jpg"
-            sectionLabel="Section 2 — Programme image"
-            scrollReveal="right"
-          />
+          <div
+            className="reveal reveal-right relative aspect-[4/5] w-full overflow-hidden rounded-card border"
+            data-reveal
+          >
+            <Image
+              src="/images/programme-photo.jpg"
+              alt="Woman preparing fresh fruit in the kitchen"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+          </div>
         </div>
       </section>
 
