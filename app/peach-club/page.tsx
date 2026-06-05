@@ -600,10 +600,13 @@ export default function PeachClubPage() {
                 data-reveal-delay={String(i * 120)}
               >
                 <Stars />
-                <p className="mb-5 flex-1 text-[14px] leading-[1.7] text-peach-text">
-                  &ldquo;{t.quote}&rdquo;
+                <p className="mb-3 font-serif text-[1.1rem] font-semibold text-peach-charcoal">
+                  {t.name}
                 </p>
-                <p className="text-[13px] text-peach-text/60">— {t.name}</p>
+                <p className="mb-5 flex-1 text-[14px] leading-[1.7] text-peach-text">
+                  {t.quote}
+                </p>
+                <span className="btn-brand-berry-full mt-auto">read more</span>
               </div>
             ))}
           </div>
