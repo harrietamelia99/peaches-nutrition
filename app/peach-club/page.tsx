@@ -593,26 +593,26 @@ export default function PeachClubPage() {
         className="section-band section-berry-band"
       >
         <div className="section-pad mx-auto max-w-page">
-          <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[1fr_auto_1fr] lg:gap-x-10 xl:gap-x-14">
-            <div
-              className="reveal flex flex-col items-center justify-center gap-4 text-center lg:max-w-[15rem] lg:items-start lg:justify-self-end lg:pr-2 lg:text-left"
-              data-reveal
-            >
+          <div className="mx-auto flex max-w-5xl flex-col items-center gap-10 lg:flex-row lg:items-center lg:justify-center lg:gap-10 xl:gap-14">
+            <div className="pricing-aside reveal" data-reveal>
               <p className="section-label-gold">Invest in You</p>
-              <h2 className="berry-heading font-serif text-[clamp(1.45rem,2.2vw,2rem)] font-medium leading-[1.22]">
-                a small investment for a lifetime of change.{" "}
-                <DecorEmoji emoji="✨" size="sm" tilt="right" className="emoji-inline" />
+              <h2 className="berry-heading font-serif text-[clamp(1.4rem,2vw,1.85rem)] font-medium leading-[1.2]">
+                <span className="block">a small investment</span>
+                <span className="mt-1 block">
+                  for a lifetime of change.{" "}
+                  <DecorEmoji emoji="✨" size="sm" tilt="right" className="emoji-inline" />
+                </span>
               </h2>
             </div>
 
-            <div className="grid w-full max-w-[34rem] gap-4 sm:grid-cols-2 sm:gap-5 lg:w-auto">
+            <div className="grid w-full max-w-[32rem] shrink-0 grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5">
               <div className="pricing-card reveal" data-reveal data-reveal-delay="100">
                 <span className="save-badge">
                   Save
                   <br />
                   £20
                 </span>
-                <div className="max-w-[calc(100%-3.5rem)]">
+                <div className="pr-14">
                   <p className="mb-1 font-sans text-[11px] font-medium uppercase tracking-[0.15em] text-peach-dot">
                     Early Bird
                   </p>
@@ -650,15 +650,12 @@ export default function PeachClubPage() {
               </div>
             </div>
 
-            <div
-              className="reveal flex flex-col items-center justify-center gap-4 text-center lg:max-w-[15rem] lg:items-start lg:justify-self-start lg:pl-2 lg:text-left"
-              data-reveal
-              data-reveal-delay="300"
-            >
-              <p className="berry-body font-serif text-[clamp(1.65rem,2.8vw,2.65rem)] font-medium leading-[1.12]">
-                you can sit with us
+            <div className="pricing-aside reveal" data-reveal data-reveal-delay="300">
+              <p className="berry-body font-serif text-[clamp(1.5rem,2.4vw,2.35rem)] font-medium leading-[1.15]">
+                <span className="block">you can</span>
+                <span className="mt-1 block">sit with us</span>
               </p>
-              <div className="flex items-center justify-center gap-3 lg:justify-start">
+              <div className="flex items-center justify-center gap-2 lg:justify-start">
                 <DecorEmoji emoji="💖" size="sm" tilt="slight-left" />
                 <DecorEmoji emoji="🍑" size="sm" tilt="right" />
               </div>

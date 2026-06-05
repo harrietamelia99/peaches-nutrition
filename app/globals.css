@@ -347,9 +347,13 @@
   }
 
   .save-badge {
-    @apply gold-gradient absolute z-10 flex h-[5rem] w-[5rem] items-center justify-center rounded-full border border-peach-border text-center font-sans text-[14px] font-semibold uppercase leading-[1.1] tracking-wide text-peach-charcoal;
-    top: -1.25rem;
-    right: -1.25rem;
+    @apply gold-gradient absolute z-10 flex h-[4.75rem] w-[4.75rem] items-center justify-center rounded-full border border-peach-border text-center font-sans text-[13px] font-semibold uppercase leading-[1.1] tracking-wide text-peach-charcoal;
+    top: -0.875rem;
+    right: 0.75rem;
+  }
+
+  .pricing-aside {
+    @apply flex w-full flex-col justify-center gap-3 text-center lg:w-[11.5rem] lg:shrink-0 lg:text-left;
   }
 
   /* Angled emoji stickers — matches Peach Club mockup */
