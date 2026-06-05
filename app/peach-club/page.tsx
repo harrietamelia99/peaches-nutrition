@@ -5,61 +5,78 @@ import { ScrollAnimator } from "@/components/scroll-animator";
 /* ─── Data ─────────────────────────────────────────────────────────────── */
 
 const programmeOutcomes = [
-  "Build a healthier relationship with food — without restriction or guilt",
-  "Understand your body, hormones, and what it actually needs",
-  "Develop mindset tools that last far beyond the 6 weeks",
-  "Create sustainable habits that fit your real life",
-  "Feel supported every step of the way by a like-minded community",
+  "Stop starting over",
+  "Improve their relationship with food",
+  "Build healthy habits that last",
+  "Feel more confident in themselves",
+  "Support sustainable fat loss without restriction",
+  "Learn how to thrive in real life, not perfect life",
 ];
 
 const painPoints = [
-  "You've tried every diet under the sun and nothing sticks",
-  "You feel guilty after eating and constantly battle food noise",
-  "You know what to do but can't seem to make it happen",
-  "You're exhausted from starting again every Monday",
-  "You feel disconnected from your body and its signals",
-  "You crave community and accountability but don't know where to find it",
+  "Feel stuck in an all-or-nothing cycle",
+  "Know what they should be doing but struggle to stay consistent",
+  "Constantly promise themselves they'll start again on Monday",
+  "Struggle with emotional eating or food guilt",
+  "Want sustainable fat loss without extremes",
+  "Feel overwhelmed by conflicting nutrition advice",
+  "Want to feel healthier, happier and more confident",
 ];
 
 const pillars = [
   {
-    emoji: "🍓",
+    emoji: "🍽️",
     title: "Nutrition",
+    description:
+      "Learn how to build balanced meals that support your goals without restriction.",
     items: [
-      "Whole-food foundations",
-      "No restriction or calorie counting",
-      "Easy, realistic meal ideas",
-      "Understanding what your body needs",
+      "Protein & fibre",
+      "Gut health",
+      "Hunger & fullness",
+      "Food freedom",
+      "Real-life nutrition",
+      "Hormones & the female body",
     ],
   },
   {
-    emoji: "🧁",
+    emoji: "🧠",
     title: "Mindset",
+    description:
+      "Transform the way you think about food, your body and yourself.",
     items: [
-      "Food guilt & emotional eating",
-      "Self-trust & body confidence",
-      "Limiting belief work",
-      "Inner critic awareness",
+      "Emotional eating awareness",
+      "Confidence",
+      "Self-talk",
+      "Limiting beliefs",
+      "Self-compassion",
+      "Breaking all-or-nothing thinking",
+      "Rebuilding self trust",
+      "Nutrition and gut health",
     ],
   },
   {
-    emoji: "🍑",
+    emoji: "✨",
     title: "Habits",
+    description: "Small daily actions that create long-term results.",
     items: [
-      "Small, sustainable changes",
-      "Habit stacking techniques",
-      "Weekly accountability",
-      "Progress over perfection",
+      "Consistency over perfection",
+      "Future self habits",
+      "Planning and routines",
+      "Sleep",
+      "Movement",
+      "Sustainable behaviour change",
     ],
   },
   {
-    emoji: "💬",
+    emoji: "🤍",
     title: "Support",
-    items: [
-      "Private community access",
-      "Weekly group coaching",
-      "Live Q&A sessions",
-      "Lifetime programme access",
+    description:
+      "A safe space where women can learn, grow and be supported.",
+    taglines: [
+      "No judgement.",
+      "No comparison.",
+      "No perfection.",
+      "Just support.",
     ],
   },
 ];
@@ -69,54 +86,51 @@ const weeks = [
     number: 1,
     title: "The Reset Era",
     description:
-      "Reset your relationship with food & self. Set your intentions & foundations.",
+      "Awareness before change. Balanced meals, protein, fibre, gut health, hunger & fullness and breaking the binge-restrict cycle.",
   },
   {
     number: 2,
-    title: "Food Feelings & Self Trust",
+    title: "Food, Feelings & Self Trust",
     description:
-      "Understand your triggers. Build self-awareness around food & emotions.",
+      "Emotional eating, food guilt, mindfulness and rebuilding trust around food.",
   },
   {
     number: 3,
     title: "The Female Body",
     description:
-      "Work with your body, not against it. Hormones, cycles & nourishment.",
+      "Hormones, periods, perimenopause, stress, energy and understanding your body better.",
   },
   {
     number: 4,
     title: "Becoming Her",
     description:
-      "Identity shifts, Confidence, self-worth & becoming your future self.",
+      "Identity change, habits, confidence and becoming the woman you keep saying you want to be.",
   },
   {
     number: 5,
     title: "Main Character Energy",
     description:
-      "Step into your power. Boundaries, energy & aligned choices.",
+      "Self-worth, confidence, boundaries, movement and showing up for yourself.",
   },
   {
     number: 6,
     title: "Peach State of Mind",
     description:
-      "Celebrate your growth & create a plan to keep the momentum.",
+      "Maintenance mindset, weekends, holidays and making this your new normal.",
   },
 ];
 
-const includedColumnOne = [
-  "6-week structured programme",
-  "Weekly coaching videos & lessons",
-  "Easy meal ideas & guides",
-  "Mindset tools & worksheets",
-  "Private community access",
-];
-
-const includedColumnTwo = [
-  "Weekly group coaching calls",
-  "Accountability & support",
-  "Habit trackers & resources",
-  "Bonus content & live Q&A",
-  "Lifetime access",
+const includedItems = [
+  "6 weeks of nutrition & mindset coaching",
+  "Private WhatsApp community",
+  "Daily accountability and Peach Checks",
+  "Weekly coaching themes",
+  "Educational resources",
+  "Recipe Vault",
+  "Coach Peach Pep Talks",
+  "Nutrition, mindset and habit-building tools",
+  "Community support from like-minded women",
+  "Direct support from me",
 ];
 
 const testimonials = [
@@ -315,33 +329,47 @@ export default function PeachClubPage() {
             style={{ "--hero-delay": "80ms" } as CSSProperties}
           >
             Peach Club Collective
-            <DecorEmoji emoji="🍓" size="sm" tilt="slight-right" />
+            <DecorEmoji emoji="🍑" size="sm" tilt="slight-right" />
           </p>
           <h1
-            className="hero-headline hero-reveal"
+            className="hero-headline hero-reveal text-[clamp(2rem,4.5vw,3.25rem)] leading-[1.1]"
             style={{ "--hero-delay": "180ms" } as CSSProperties}
           >
-            Rewrite
-            <br />
-            Your Story
+            A women&apos;s nutrition &amp; mindset community.
           </h1>
-          <span
-            className="hero-highlight hero-reveal"
-            style={{ "--hero-delay": "300ms" } as CSSProperties}
+          <p
+            className="hero-body hero-reveal max-w-md"
+            style={{ "--hero-delay": "280ms" } as CSSProperties}
           >
-            A women&apos;s nutrition &amp; mindset community
-          </span>
+            Helping women stop starting over with food, rebuild self trust and
+            create healthy habits that actually last.
+          </p>
+          <p
+            className="hero-body hero-reveal font-serif text-[17px] font-medium"
+            style={{ "--hero-delay": "360ms" } as CSSProperties}
+          >
+            Nutrition meets mindset.
+          </p>
           <p
             className="hero-body hero-reveal"
             style={{ "--hero-delay": "420ms" } as CSSProperties}
           >
-            Nutrition meets mindset.
+            No extremes.
             <br />
-            No extremes. No starting again on Monday.
+            No perfection.
+            <br />
+            No starting again every Monday.
+          </p>
+          <p
+            className="hero-body hero-reveal max-w-md"
+            style={{ "--hero-delay": "480ms" } as CSSProperties}
+          >
+            Just sustainable change, real-life support and a community of women
+            who get it.
           </p>
           <div
             className="hero-reveal pt-1"
-            style={{ "--hero-delay": "540ms" } as CSSProperties}
+            style={{ "--hero-delay": "560ms" } as CSSProperties}
           >
             <a href="#payment" className="btn-brand-white-lg">
               <span className="btn-dot" aria-hidden="true" />
@@ -362,32 +390,34 @@ export default function PeachClubPage() {
       <section className="section-band programme-section section-faded-grid">
         <div className="section-pad mx-auto grid max-w-page items-center gap-8 md:grid-cols-2 md:gap-10">
           <div className="reveal max-w-xl" data-reveal>
-            <p className="section-label mb-4">Introducing the Programme</p>
-            <div className="mb-7">
-              <h2 className="programme-headline">
-                Rewrite Your Story
-              </h2>
-              <p className="programme-subhead">
-                A 6-Week Nutrition &amp; Mindset Experience
-              </p>
-            </div>
-            <p className="programme-body mb-5">
-              This is your invitation to finally break free from the diet cycle
-              and build a relationship with food, your body, and yourself that
-              actually feels good.
+            <p className="section-label mb-4">
+              Introducing Rewrite Your Story{" "}
+              <DecorEmoji emoji="✨" size="sm" tilt="right" className="emoji-inline" />
             </p>
-            <p className="programme-body mb-8">
-              Over 6 weeks, you&apos;ll be guided through a structured programme
-              that blends evidence-based nutrition with powerful mindset work —
-              all within a warm, supportive community of women who get it.
+            <p className="programme-body mb-5">
+              The signature 6-week experience inside Peach Club Collective.
+            </p>
+            <p className="programme-body mb-5">
+              Rewrite Your Story is a guided nutrition and mindset journey for
+              women who are ready to:
             </p>
             <ul className="mb-8 flex flex-col gap-3">
               {programmeOutcomes.map((item) => (
                 <BulletItem key={item}>{item}</BulletItem>
               ))}
             </ul>
-            <p className="programme-accent">
+            <p className="programme-accent mb-3">
               This isn&apos;t another diet.
+            </p>
+            <p className="programme-body mb-3">
+              It&apos;s a completely different approach.
+            </p>
+            <p className="programme-body mb-3">
+              Because lasting transformation isn&apos;t just about what you eat.
+            </p>
+            <p className="programme-body">
+              It&apos;s about how you think, what you believe about yourself
+              and the habits you practise every day.
             </p>
           </div>
           <PlaceholderImage
@@ -402,15 +432,9 @@ export default function PeachClubPage() {
       <section className="section-band bg-peach-3">
         <div className="section-pad mx-auto max-w-page">
           <div className="reveal section-head text-center" data-reveal>
-            <p className="section-label mb-4">Is This You?</p>
-            <h2 className="heading-display text-center text-[clamp(1.75rem,3.5vw,2.5rem)]">
-              you&apos;re not alone. we see you.{" "}
-              <DecorEmoji
-                emoji="💬"
-                size="sm"
-                tilt="slight-right"
-                className="emoji-inline"
-              />
+            <p className="section-label mb-4">Who It&apos;s For</p>
+            <h2 className="heading-display mx-auto max-w-2xl text-center text-[clamp(1.75rem,3.5vw,2.5rem)]">
+              Rewrite Your Story is designed for women who:
             </h2>
           </div>
           <div
@@ -419,12 +443,12 @@ export default function PeachClubPage() {
             data-reveal-delay="120"
           >
             <ul className="flex flex-col gap-2">
-              {painPoints.slice(0, 3).map((point) => (
+              {painPoints.slice(0, 4).map((point) => (
                 <BulletItem key={point}>{point}</BulletItem>
               ))}
             </ul>
             <ul className="flex flex-col gap-2">
-              {painPoints.slice(3).map((point) => (
+              {painPoints.slice(4).map((point) => (
                 <BulletItem key={point}>{point}</BulletItem>
               ))}
             </ul>
@@ -436,35 +460,52 @@ export default function PeachClubPage() {
       <section className="section-band section-berry-band">
         <div className="section-pad mx-auto max-w-page">
           <div className="reveal section-head text-center" data-reveal>
-            <p className="section-label mb-4">The Method</p>
-            <h2 className="heading-display text-center text-[clamp(1.75rem,3.5vw,2.5rem)] text-white">
-              four pillars. one you.{" "}
-              <DecorEmoji emoji="✨" size="sm" tilt="right" className="emoji-inline" />
-            </h2>
+            <p className="section-label mb-4">The Peach Club Collective Method</p>
           </div>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5">
             {pillars.map((pillar, i) => (
               <div
                 key={pillar.title}
-                className="card-hover card-white hover-lift reveal"
+                className="card-hover card-white hover-lift reveal flex flex-col"
                 data-reveal
                 data-reveal-delay={String(i * 100)}
               >
-                <div className="mb-5 flex justify-center">
+                <div className="mb-4 flex justify-center">
                   <DecorEmoji
                     emoji={pillar.emoji}
                     size="lg"
                     tilt={i % 2 === 0 ? "left" : "right"}
                   />
                 </div>
-                <h3 className="mb-5 text-center font-serif text-[1.25rem] font-medium text-peach-charcoal">
+                <h3 className="mb-3 text-center font-serif text-[1.25rem] font-medium text-peach-charcoal">
                   {pillar.title}
                 </h3>
-                <ul className="flex flex-col gap-3">
-                  {pillar.items.map((item) => (
-                    <PillarBullet key={item}>{item}</PillarBullet>
-                  ))}
-                </ul>
+                <p className="mb-4 text-center text-[13px] leading-relaxed text-peach-text">
+                  {pillar.description}
+                </p>
+                {"items" in pillar && pillar.items ? (
+                  <>
+                    <p className="mb-2 font-sans text-[11px] font-medium uppercase tracking-[0.12em] text-peach-text/60">
+                      Topics include:
+                    </p>
+                    <ul className="flex flex-col gap-2.5">
+                      {pillar.items.map((item) => (
+                        <PillarBullet key={item}>{item}</PillarBullet>
+                      ))}
+                    </ul>
+                  </>
+                ) : (
+                  <ul className="mt-auto flex flex-col gap-1.5 text-center">
+                    {pillar.taglines?.map((line) => (
+                      <li
+                        key={line}
+                        className="font-serif text-[14px] font-medium leading-snug text-peach-charcoal"
+                      >
+                        {line}
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </div>
             ))}
           </div>
@@ -475,18 +516,8 @@ export default function PeachClubPage() {
       <section className="section-band journey-section section-faded-grid">
         <div className="section-pad mx-auto grid max-w-page items-start gap-8 md:grid-cols-[minmax(0,0.95fr)_minmax(0,2.05fr)] md:gap-x-12 lg:gap-x-14">
           <div className="reveal flex flex-col gap-4 md:pt-1" data-reveal>
-            <p className="section-label">The 6-Week Journey</p>
             <h2 className="heading-display text-[clamp(2rem,4vw,3.1rem)] leading-[1.12]">
-              <span className="block">Your story</span>
-              <span className="mt-0.5 block">
-                starts here.{" "}
-                <DecorEmoji
-                  emoji="💬"
-                  size="sm"
-                  tilt="slight-right"
-                  className="emoji-inline"
-                />
-              </span>
+              Your 6-Week Journey
             </h2>
           </div>
           <div className="flex flex-col gap-3">
@@ -520,35 +551,24 @@ export default function PeachClubPage() {
           className="pointer-events-none absolute bottom-8 right-8 hidden md:block"
         />
         <div className="section-pad mx-auto max-w-page">
-          <div
-            className="reveal grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-[1.15fr_1fr_1fr] md:gap-x-10 md:gap-y-4 lg:gap-x-14"
-            data-reveal
-          >
-            <p className="section-label sm:col-span-2 md:col-span-1 md:col-start-1 md:row-start-1">
-              What&apos;s Included
+          <div className="reveal mx-auto max-w-3xl" data-reveal>
+            <p className="section-label mb-4 text-center md:text-left">
+              What&apos;s Included?
             </p>
-
-            <div className="sm:col-span-2 md:col-span-1 md:col-start-1 md:row-start-2">
-              <h2 className="heading-display text-[clamp(1.75rem,3.2vw,2.5rem)] leading-[1.15]">
-                <span className="block">Everything you</span>
-                <span className="mt-0.5 block">
-                  need to succeed.{" "}
-                  <DecorEmoji emoji="✨" size="sm" tilt="right" className="emoji-inline" />
-                </span>
-              </h2>
+            <ul className="grid gap-3 sm:grid-cols-2 sm:gap-x-10">
+              {includedItems.map((item) => (
+                <CheckItem key={item}>{item}</CheckItem>
+              ))}
+            </ul>
+            <div className="mt-10 flex flex-col items-center gap-3 text-center md:items-start md:text-left">
+              <p className="font-serif text-[clamp(1.5rem,2.8vw,2.25rem)] font-medium leading-[1.15] text-peach-charcoal">
+                you can sit with us
+              </p>
+              <div className="flex items-center gap-2">
+                <DecorEmoji emoji="💖" size="sm" tilt="slight-left" />
+                <DecorEmoji emoji="🍑" size="sm" tilt="right" />
+              </div>
             </div>
-
-            <ul className="flex flex-col gap-3 md:col-start-2 md:row-start-2">
-              {includedColumnOne.map((item) => (
-                <CheckItem key={item}>{item}</CheckItem>
-              ))}
-            </ul>
-
-            <ul className="flex flex-col gap-3 md:col-start-3 md:row-start-2">
-              {includedColumnTwo.map((item) => (
-                <CheckItem key={item}>{item}</CheckItem>
-              ))}
-            </ul>
           </div>
         </div>
       </section>
@@ -593,15 +613,12 @@ export default function PeachClubPage() {
         className="section-band section-berry-band"
       >
         <div className="section-pad mx-auto max-w-page">
-          <div className="mx-auto flex max-w-5xl flex-col items-center gap-10 lg:flex-row lg:items-center lg:justify-center lg:gap-10 xl:gap-14">
-            <div className="pricing-aside reveal" data-reveal>
-              <p className="section-label-gold">Invest in You</p>
+          <div className="mx-auto flex max-w-3xl flex-col items-center gap-10">
+            <div className="reveal text-center" data-reveal>
+              <p className="section-label-gold mb-3">Invest in You</p>
               <h2 className="berry-heading font-serif text-[clamp(1.4rem,2vw,1.85rem)] font-medium leading-[1.2]">
-                <span className="block">a small investment</span>
-                <span className="mt-1 block">
-                  for a lifetime of change.{" "}
-                  <DecorEmoji emoji="✨" size="sm" tilt="right" className="emoji-inline" />
-                </span>
+                a small investment for a lifetime of change.{" "}
+                <DecorEmoji emoji="✨" size="sm" tilt="right" className="emoji-inline" />
               </h2>
             </div>
 
@@ -649,17 +666,6 @@ export default function PeachClubPage() {
                 </a>
               </div>
             </div>
-
-            <div className="pricing-aside reveal" data-reveal data-reveal-delay="300">
-              <p className="berry-body font-serif text-[clamp(1.5rem,2.4vw,2.35rem)] font-medium leading-[1.15]">
-                <span className="block">you can</span>
-                <span className="mt-1 block">sit with us</span>
-              </p>
-              <div className="flex items-center justify-center gap-2 lg:justify-start">
-                <DecorEmoji emoji="💖" size="sm" tilt="slight-left" />
-                <DecorEmoji emoji="🍑" size="sm" tilt="right" />
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -672,27 +678,23 @@ export default function PeachClubPage() {
             data-reveal
           >
             <h2 className="heading-display text-center text-[clamp(1.85rem,3.8vw,2.85rem)] leading-[1.12]">
-              ready to rewrite your story?{" "}
-              <DecorEmoji emoji="✨" size="sm" tilt="right" className="emoji-inline" />
+              Ready to Rewrite Your Story?
             </h2>
-            <p className="mt-5 max-w-lg text-[15px] leading-[1.75] text-peach-text">
-              You deserve to feel good in your body, your mind, and your life.
-              Let&apos;s do this together.
+            <p className="mt-5 max-w-lg font-serif text-[clamp(1.1rem,2vw,1.35rem)] font-medium leading-[1.5] text-peach-text">
+              Stop starting over.
+            </p>
+            <p className="mt-3 max-w-lg text-[15px] leading-[1.75] text-peach-text">
+              Start building a healthier, happier and more confident version of
+              yourself.
+            </p>
+            <p className="mt-3 max-w-lg text-[15px] leading-[1.75] text-peach-text">
+              Join Rewrite Your Story inside Peach Club Collective today.
             </p>
             <div className="mt-8 flex w-full flex-col items-center gap-4">
               <a href="#payment" className="btn-brand-white-lg">
                 <span className="btn-dot" aria-hidden="true" />
                 join now
               </a>
-              <p className="text-center font-serif text-[15px] text-peach-text/70">
-                Your story is waiting.{" "}
-                <DecorEmoji
-                  emoji="💬"
-                  size="sm"
-                  tilt="slight-right"
-                  className="emoji-inline"
-                />
-              </p>
             </div>
           </div>
         </div>
