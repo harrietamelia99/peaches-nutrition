@@ -518,18 +518,14 @@ export default function PeachClubPage() {
               What&apos;s Included
             </p>
 
-            <div className="flex flex-col gap-3 sm:col-span-2 md:col-span-1 md:col-start-1 md:row-start-2">
+            <div className="sm:col-span-2 md:col-span-1 md:col-start-1 md:row-start-2">
               <h2 className="heading-display text-[clamp(1.75rem,3.2vw,2.5rem)] leading-[1.15]">
                 <span className="block">Everything you</span>
                 <span className="mt-0.5 flex flex-wrap items-center gap-x-2">
                   <span>need to succeed.</span>
-                  <span className="inline-flex items-center gap-1">
-                    <DecorEmoji emoji="✨" size="sm" tilt="right" />
-                    <DecorEmoji emoji="✨" size="sm" tilt="slight-right" />
-                  </span>
+                  <DecorEmoji emoji="✨" size="sm" tilt="right" />
                 </span>
               </h2>
-              <DecorEmoji emoji="🍓" size="md" tilt="slight-left" />
             </div>
 
             <ul className="flex flex-col gap-3 md:col-start-2 md:row-start-2">
@@ -609,17 +605,19 @@ export default function PeachClubPage() {
             </div>
 
             <div className="pricing-card reveal" data-reveal data-reveal-delay="100">
-              <span className="gold-gradient absolute -right-2 -top-3 z-10 flex h-[5rem] w-[5rem] items-center justify-center rounded-full border border-peach-border text-center font-sans text-[14px] font-semibold uppercase leading-[1.1] tracking-wide text-peach-charcoal">
+              <span className="save-badge">
                 Save
                 <br />
                 £20
               </span>
-              <p className="mb-1 font-sans text-[11px] font-medium uppercase tracking-[0.15em] text-peach-dot">
-                Early Bird
-              </p>
-              <p className="mb-4 text-[13px] text-peach-text/60">
-                Limited to first 5 spaces
-              </p>
+              <div className="max-w-[calc(100%-3.5rem)]">
+                <p className="mb-1 font-sans text-[11px] font-medium uppercase tracking-[0.15em] text-peach-dot">
+                  Early Bird
+                </p>
+                <p className="mb-4 text-[13px] text-peach-text/60">
+                  Limited to first 5 spaces
+                </p>
+              </div>
               <p className="price-display mb-5">£147</p>
               <ul className="mb-6 flex flex-col gap-2.5">
                 {pricingFeatures.map((f) => (
