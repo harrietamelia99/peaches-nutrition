@@ -654,46 +654,32 @@ export default function PeachClubPage() {
       </section>
 
       {/* ── 9. Final CTA ────────────────────────────────────────────── */}
-      <section className="section-band relative bg-peach-1">
-        <DecorEmoji
-          emoji="🧁"
-          size="sm"
-          tilt="left"
-          className="pointer-events-none absolute bottom-6 left-8 hidden md:block"
-        />
-        <DecorEmoji
-          emoji="🍓"
-          size="sm"
-          tilt="right"
-          className="pointer-events-none absolute bottom-6 right-8 hidden md:block"
-        />
-        <div className="section-pad mx-auto grid max-w-page items-center gap-8 md:grid-cols-2 md:gap-10">
-          <div className="reveal flex flex-col gap-4" data-reveal>
-            <h2 className="heading-display flex flex-wrap items-center gap-x-2 gap-y-1 text-[clamp(1.75rem,3.5vw,2.5rem)]">
-              <span>ready to rewrite your story?</span>
-              <DecorEmoji emoji="✨" size="md" tilt="right" />
+      <section className="section-band bg-peach-1">
+        <div className="section-pad mx-auto max-w-page">
+          <div
+            className="reveal mx-auto flex max-w-2xl flex-col items-center px-2 text-center"
+            data-reveal
+          >
+            <h2 className="heading-display text-[clamp(1.85rem,3.8vw,2.85rem)] leading-[1.12]">
+              <span className="flex flex-wrap items-center justify-center gap-x-2 gap-y-1">
+                ready to rewrite your story?
+                <DecorEmoji emoji="✨" size="sm" tilt="right" />
+              </span>
             </h2>
-            <p className="max-w-md text-[15px] leading-[1.7]">
+            <p className="mt-5 max-w-lg text-[15px] leading-[1.75] text-peach-text">
               You deserve to feel good in your body, your mind, and your life.
               Let&apos;s do this together.
             </p>
-          </div>
-          <div
-            className="reveal flex flex-col items-center gap-4 md:items-end"
-            data-reveal
-            data-reveal-delay="150"
-          >
-            <a
-              href="#payment"
-              className="btn-brand-berry-lg btn-with-heart inline-flex w-full max-w-[320px] items-center justify-center gap-2 md:w-auto"
-            >
-              join now
-              <GoldHeart size={40} tilt="right" />
-            </a>
-            <p className="flex items-center gap-2 font-serif text-[15px] text-peach-text/70">
-              Your story is waiting.
-              <DecorEmoji emoji="💬" size="sm" tilt="slight-right" />
-            </p>
+            <div className="mt-8 flex w-full flex-col items-center gap-4">
+              <a href="#payment" className="btn-brand-berry-hero btn-with-heart gap-3">
+                Join now
+                <GoldHeart size={32} tilt="right" />
+              </a>
+              <p className="flex items-center justify-center gap-2 font-serif text-[15px] text-peach-text/70">
+                Your story is waiting.
+                <DecorEmoji emoji="💬" size="sm" tilt="slight-right" />
+              </p>
+            </div>
           </div>
         </div>
       </section>
