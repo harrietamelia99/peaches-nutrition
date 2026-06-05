@@ -377,16 +377,16 @@ export default function PeachClubPage() {
           </div>
         </div>
         <div
-          className="hero-reveal-right flex min-h-[50vh] items-center justify-center bg-peach-1 px-6 py-10 sm:px-10 lg:min-h-0 lg:py-12 lg:pl-6 lg:pr-12"
+          className="hero-reveal-right flex w-full items-center justify-center bg-peach-1 px-6 py-10 sm:px-10 lg:min-h-0 lg:py-12 lg:px-10"
           style={{ "--hero-delay": "260ms" } as CSSProperties}
         >
-          <div className="relative aspect-[4/5] w-full max-w-[14rem] overflow-hidden rounded-card border sm:max-w-[16rem] lg:max-w-[13.5rem] xl:max-w-[15rem]">
+          <div className="relative aspect-[4/5] w-full overflow-hidden rounded-card border">
             <Image
               src="/images/hero-photo.jpg"
               alt="Woman in activewear smiling in a cosy living space"
               fill
               className="object-cover"
-              sizes="(max-width: 1024px) 65vw, 15rem"
+              sizes="(max-width: 768px) 100vw, 50vw"
               priority
             />
           </div>
