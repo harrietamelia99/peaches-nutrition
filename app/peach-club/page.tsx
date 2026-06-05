@@ -343,9 +343,9 @@ export default function PeachClubPage() {
             className="hero-reveal pt-1"
             style={{ "--hero-delay": "540ms" } as CSSProperties}
           >
-            <a href="#payment" className="btn-brand-berry-hero btn-with-heart gap-3">
-              Join rewrite your story
-              <GoldHeart size={32} tilt="right" />
+            <a href="#payment" className="btn-brand-white-lg">
+              <span className="btn-dot" aria-hidden="true" />
+              join rewrite your story
             </a>
           </div>
         </div>
@@ -680,9 +680,9 @@ export default function PeachClubPage() {
               Let&apos;s do this together.
             </p>
             <div className="mt-8 flex w-full flex-col items-center gap-4">
-              <a href="#payment" className="btn-brand-berry-hero btn-with-heart gap-3">
-                Join now
-                <GoldHeart size={32} tilt="right" />
+              <a href="#payment" className="btn-brand-white-lg">
+                <span className="btn-dot" aria-hidden="true" />
+                join now
               </a>
               <p className="text-center font-serif text-[15px] text-peach-text/70">
                 Your story is waiting.{" "}
