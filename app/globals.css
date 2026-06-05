@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans text-peach-text antialiased;
+  }
+}
+
+@layer components {
+  .section-label {
+    @apply font-sans text-xs font-medium uppercase tracking-[0.2em] text-peach-berry;
+  }
+
+  .section-label-light {
+    @apply font-sans text-xs font-medium uppercase tracking-[0.2em] text-white/90;
+  }
+
+  .heading-serif {
+    @apply font-serif font-bold text-peach-charcoal;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-pill bg-peach-berry px-8 py-4 font-serif text-sm font-medium uppercase tracking-wide text-white transition-all duration-300 hover:bg-peach-berry-dark hover:-translate-y-0.5;
+  }
+
+  .btn-primary-lg {
+    @apply inline-flex items-center justify-center gap-2 rounded-pill bg-peach-berry px-10 py-5 font-serif text-base font-medium uppercase tracking-wide text-white transition-all duration-300 hover:bg-peach-berry-dark hover:-translate-y-0.5;
+  }
+
+  .btn-join {
+    @apply inline-flex w-full items-center justify-center rounded-pill bg-peach-berry px-6 py-3.5 font-serif text-sm font-medium uppercase tracking-wide text-white transition-all duration-300 hover:bg-peach-berry-dark;
+  }
+
+  .pill-badge {
+    @apply inline-block rounded-pill bg-peach-pink px-5 py-2 font-sans text-sm text-peach-berry;
+  }
+
+  .card-white {
+    @apply rounded-card bg-white p-6 shadow-card md:p-8;
+  }
+
+  .bullet-dot {
+    @apply mt-2 h-2 w-2 shrink-0 rounded-full bg-peach-berry;
+  }
+
+  .check-icon {
+    @apply flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-peach-pink text-sm text-peach-berry;
+  }
+}
