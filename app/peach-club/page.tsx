@@ -26,9 +26,7 @@ const painPoints = [
 const pillars = [
   {
     emoji: "🍽️",
-    title: "nutrition",
-    description:
-      "Learn how to build balanced meals that support your goals without restriction.",
+    title: "Nutrition",
     items: [
       "Protein & fibre",
       "Gut health",
@@ -40,9 +38,7 @@ const pillars = [
   },
   {
     emoji: "🧠",
-    title: "mindset",
-    description:
-      "Transform the way you think about food, your body and yourself.",
+    title: "Mindset",
     items: [
       "Emotional eating awareness",
       "Confidence",
@@ -56,8 +52,7 @@ const pillars = [
   },
   {
     emoji: "✨",
-    title: "habits",
-    description: "Small daily actions that create long-term results.",
+    title: "Habits",
     items: [
       "Consistency over perfection",
       "Future self habits",
@@ -69,10 +64,8 @@ const pillars = [
   },
   {
     emoji: "🤍",
-    title: "support",
-    description:
-      "A safe space where women can learn, grow and be supported.",
-    taglines: [
+    title: "Support",
+    items: [
       "No judgement.",
       "No comparison.",
       "No perfection.",
@@ -84,48 +77,51 @@ const pillars = [
 const weeks = [
   {
     number: 1,
-    title: "the reset era",
+    title: "The Reset Era",
     description:
       "Awareness before change. Balanced meals, protein, fibre, gut health, hunger & fullness and breaking the binge-restrict cycle.",
   },
   {
     number: 2,
-    title: "food, feelings & self trust",
+    title: "Food, Feelings & Self Trust",
     description:
       "Emotional eating, food guilt, mindfulness and rebuilding trust around food.",
   },
   {
     number: 3,
-    title: "the female body",
+    title: "The Female Body",
     description:
       "Hormones, periods, perimenopause, stress, energy and understanding your body better.",
   },
   {
     number: 4,
-    title: "becoming her",
+    title: "Becoming Her",
     description:
       "Identity change, habits, confidence and becoming the woman you keep saying you want to be.",
   },
   {
     number: 5,
-    title: "main character energy",
+    title: "Main Character Energy",
     description:
       "Self-worth, confidence, boundaries, movement and showing up for yourself.",
   },
   {
     number: 6,
-    title: "peach state of mind",
+    title: "Peach State of Mind",
     description:
       "Maintenance mindset, weekends, holidays and making this your new normal.",
   },
 ];
 
-const includedItems = [
+const includedColumnOne = [
   "6 weeks of nutrition & mindset coaching",
   "Private WhatsApp community",
   "Daily accountability and Peach Checks",
   "Weekly coaching themes",
   "Educational resources",
+];
+
+const includedColumnTwo = [
   "Recipe Vault",
   "Coach Peach Pep Talks",
   "Nutrition, mindset and habit-building tools",
@@ -138,7 +134,6 @@ const testimonials = [
     name: "Sara",
     quote:
       "More than a coach, Jem has become a friend for life. If you're stuck in extremes, convinced nothing will work for you, or afraid to be honest about your relationship with food, I couldn't recommend her more.",
-    decor: "strawberry" as const,
   },
   {
     name: "Lianne",
@@ -149,7 +144,6 @@ const testimonials = [
     name: "Emma",
     quote:
       "I never once felt judged. I could be fully myself and completely honest with her, there was never a moment where I felt like I had to hold something back.",
-    decor: "gold-heart" as const,
   },
   {
     name: "Jade",
@@ -339,44 +333,42 @@ export default function PeachClubPage() {
             <DecorEmoji emoji="🍑" size="sm" tilt="slight-right" />
           </p>
           <h1
-            className="hero-headline hero-reveal text-[clamp(2rem,4.5vw,3.25rem)] leading-[1.1]"
+            className="hero-headline hero-reveal"
             style={{ "--hero-delay": "180ms" } as CSSProperties}
           >
-            a women&apos;s nutrition &amp; mindset community.
+            Rewrite
+            <br />
+            Your Story
           </h1>
+          <span
+            className="hero-highlight hero-reveal"
+            style={{ "--hero-delay": "300ms" } as CSSProperties}
+          >
+            A women&apos;s nutrition &amp; mindset community
+          </span>
           <p
             className="hero-body hero-reveal max-w-md"
-            style={{ "--hero-delay": "280ms" } as CSSProperties}
+            style={{ "--hero-delay": "420ms" } as CSSProperties}
           >
             Helping women stop starting over with food, rebuild self trust and
             create healthy habits that actually last.
-          </p>
-          <p
-            className="hero-body hero-reveal font-serif text-[17px] font-medium"
-            style={{ "--hero-delay": "360ms" } as CSSProperties}
-          >
+            <br />
+            <br />
             Nutrition meets mindset.
-          </p>
-          <p
-            className="hero-body hero-reveal"
-            style={{ "--hero-delay": "420ms" } as CSSProperties}
-          >
+            <br />
             No extremes.
             <br />
             No perfection.
             <br />
             No starting again every Monday.
-          </p>
-          <p
-            className="hero-body hero-reveal max-w-md"
-            style={{ "--hero-delay": "480ms" } as CSSProperties}
-          >
+            <br />
+            <br />
             Just sustainable change, real-life support and a community of women
             who get it.
           </p>
           <div
             className="hero-reveal pt-1"
-            style={{ "--hero-delay": "560ms" } as CSSProperties}
+            style={{ "--hero-delay": "540ms" } as CSSProperties}
           >
             <a href="#payment" className="btn-brand-white-lg">
               <span className="btn-dot" aria-hidden="true" />
@@ -397,13 +389,13 @@ export default function PeachClubPage() {
       <section className="section-band programme-section section-faded-grid">
         <div className="section-pad mx-auto grid max-w-page items-center gap-8 md:grid-cols-2 md:gap-10">
           <div className="reveal max-w-xl" data-reveal>
-            <p className="section-label mb-4">
-              introducing rewrite your story{" "}
-              <DecorEmoji emoji="✨" size="sm" tilt="right" className="emoji-inline" />
-            </p>
-            <p className="programme-body mb-5">
-              The signature 6-week experience inside Peach Club Collective.
-            </p>
+            <p className="section-label mb-4">Introducing the Programme</p>
+            <div className="mb-7">
+              <h2 className="programme-headline">Rewrite Your Story</h2>
+              <p className="programme-subhead">
+                The signature 6-week experience inside Peach Club Collective.
+              </p>
+            </div>
             <p className="programme-body mb-5">
               Rewrite Your Story is a guided nutrition and mindset journey for
               women who are ready to:
@@ -439,8 +431,8 @@ export default function PeachClubPage() {
       <section className="section-band bg-peach-3">
         <div className="section-pad mx-auto max-w-page">
           <div className="reveal section-head text-center" data-reveal>
-            <p className="section-label mb-4">who it&apos;s for</p>
-            <h2 className="heading-display mx-auto max-w-2xl text-center text-[clamp(1.75rem,3.5vw,2.5rem)]">
+            <p className="section-label mb-4">Who It&apos;s For</p>
+            <h2 className="heading-display text-center text-[clamp(1.75rem,3.5vw,2.5rem)]">
               rewrite your story is designed for women who:
             </h2>
           </div>
@@ -467,52 +459,35 @@ export default function PeachClubPage() {
       <section className="section-band section-berry-band">
         <div className="section-pad mx-auto max-w-page">
           <div className="reveal section-head text-center" data-reveal>
-            <p className="section-label mb-4">the peach club collective method</p>
+            <p className="section-label mb-4">The Method</p>
+            <h2 className="heading-display text-center text-[clamp(1.75rem,3.5vw,2.5rem)] text-white">
+              four pillars. one you.{" "}
+              <DecorEmoji emoji="✨" size="sm" tilt="right" className="emoji-inline" />
+            </h2>
           </div>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5">
             {pillars.map((pillar, i) => (
               <div
                 key={pillar.title}
-                className="card-hover card-white hover-lift reveal flex flex-col"
+                className="card-hover card-white hover-lift reveal"
                 data-reveal
                 data-reveal-delay={String(i * 100)}
               >
-                <div className="mb-4 flex justify-center">
+                <div className="mb-5 flex justify-center">
                   <DecorEmoji
                     emoji={pillar.emoji}
                     size="lg"
                     tilt={i % 2 === 0 ? "left" : "right"}
                   />
                 </div>
-                <h3 className="mb-3 text-center font-serif text-[1.25rem] font-medium text-peach-charcoal">
+                <h3 className="mb-5 text-center font-serif text-[1.25rem] font-medium text-peach-charcoal">
                   {pillar.title}
                 </h3>
-                <p className="mb-4 text-center text-[13px] leading-relaxed text-peach-text">
-                  {pillar.description}
-                </p>
-                {"items" in pillar && pillar.items ? (
-                  <>
-                    <p className="mb-2 font-sans text-[11px] font-medium uppercase tracking-[0.12em] text-peach-text/60">
-                      topics include:
-                    </p>
-                    <ul className="flex flex-col gap-2.5">
-                      {pillar.items.map((item) => (
-                        <PillarBullet key={item}>{item}</PillarBullet>
-                      ))}
-                    </ul>
-                  </>
-                ) : (
-                  <ul className="mt-auto flex flex-col gap-1.5 text-center">
-                    {pillar.taglines?.map((line) => (
-                      <li
-                        key={line}
-                        className="font-serif text-[14px] font-medium leading-snug text-peach-charcoal"
-                      >
-                        {line}
-                      </li>
-                    ))}
-                  </ul>
-                )}
+                <ul className="flex flex-col gap-3">
+                  {pillar.items.map((item) => (
+                    <PillarBullet key={item}>{item}</PillarBullet>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
@@ -523,8 +498,18 @@ export default function PeachClubPage() {
       <section className="section-band journey-section section-faded-grid">
         <div className="section-pad mx-auto grid max-w-page items-start gap-8 md:grid-cols-[minmax(0,0.95fr)_minmax(0,2.05fr)] md:gap-x-12 lg:gap-x-14">
           <div className="reveal flex flex-col gap-4 md:pt-1" data-reveal>
+            <p className="section-label">The 6-Week Journey</p>
             <h2 className="heading-display text-[clamp(2rem,4vw,3.1rem)] leading-[1.12]">
-              your 6-week journey
+              <span className="block">Your story</span>
+              <span className="mt-0.5 block">
+                starts here.{" "}
+                <DecorEmoji
+                  emoji="💬"
+                  size="sm"
+                  tilt="slight-right"
+                  className="emoji-inline"
+                />
+              </span>
             </h2>
           </div>
           <div className="flex flex-col gap-3">
@@ -535,7 +520,7 @@ export default function PeachClubPage() {
                 data-reveal
                 data-reveal-delay={String(i * 80)}
               >
-                <span className="week-badge">week {week.number}</span>
+                <span className="week-badge">Week {week.number}</span>
                 <div className="min-w-0">
                   <p className="font-serif text-[1.1rem] font-semibold leading-tight text-peach-charcoal md:text-[1.15rem]">
                     {week.title}
@@ -558,24 +543,35 @@ export default function PeachClubPage() {
           className="pointer-events-none absolute bottom-8 right-8 hidden md:block"
         />
         <div className="section-pad mx-auto max-w-page">
-          <div className="reveal mx-auto max-w-3xl" data-reveal>
-            <p className="section-label mb-4 text-center md:text-left">
-              what&apos;s included?
+          <div
+            className="reveal grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-[1.15fr_1fr_1fr] md:gap-x-10 md:gap-y-4 lg:gap-x-14"
+            data-reveal
+          >
+            <p className="section-label sm:col-span-2 md:col-span-1 md:col-start-1 md:row-start-1">
+              What&apos;s Included
             </p>
-            <ul className="grid gap-3 sm:grid-cols-2 sm:gap-x-10">
-              {includedItems.map((item) => (
+
+            <div className="sm:col-span-2 md:col-span-1 md:col-start-1 md:row-start-2">
+              <h2 className="heading-display text-[clamp(1.75rem,3.2vw,2.5rem)] leading-[1.15]">
+                <span className="block">Everything you</span>
+                <span className="mt-0.5 block">
+                  need to succeed.{" "}
+                  <DecorEmoji emoji="✨" size="sm" tilt="right" className="emoji-inline" />
+                </span>
+              </h2>
+            </div>
+
+            <ul className="flex flex-col gap-3 md:col-start-2 md:row-start-2">
+              {includedColumnOne.map((item) => (
                 <CheckItem key={item}>{item}</CheckItem>
               ))}
             </ul>
-            <div className="mt-10 flex flex-col items-center gap-3 text-center md:items-start md:text-left">
-              <p className="font-serif text-[clamp(1.5rem,2.8vw,2.25rem)] font-medium leading-[1.15] text-peach-charcoal">
-                you can sit with us
-              </p>
-              <div className="flex items-center gap-2">
-                <DecorEmoji emoji="💖" size="sm" tilt="slight-left" />
-                <DecorEmoji emoji="🍑" size="sm" tilt="right" />
-              </div>
-            </div>
+
+            <ul className="flex flex-col gap-3 md:col-start-3 md:row-start-2">
+              {includedColumnTwo.map((item) => (
+                <CheckItem key={item}>{item}</CheckItem>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
@@ -584,7 +580,7 @@ export default function PeachClubPage() {
       <section className="section-band bg-peach-3">
         <div className="section-pad mx-auto max-w-page">
           <div className="reveal section-head text-center" data-reveal>
-            <p className="section-label mb-4">client testimonials</p>
+            <p className="section-label mb-4">Client Testimonials</p>
             <h2 className="heading-display text-center text-[clamp(1.75rem,3.5vw,2.5rem)]">
               don&apos;t just take our word for it{" "}
               <DecorEmoji
@@ -599,33 +595,15 @@ export default function PeachClubPage() {
             {testimonials.map((t, i) => (
               <div
                 key={t.name}
-                className="card-white hover-lift reveal relative flex flex-col"
+                className="card-white hover-lift reveal flex flex-col"
                 data-reveal
                 data-reveal-delay={String(i * 120)}
               >
                 <Stars />
-                <p className="mb-3 font-serif text-[1.1rem] font-semibold text-peach-charcoal">
-                  {t.name}
-                </p>
                 <p className="mb-5 flex-1 text-[14px] leading-[1.7] text-peach-text">
-                  {t.quote}
+                  &ldquo;{t.quote}&rdquo;
                 </p>
-                <span className="btn-brand-berry-full mt-auto">read more</span>
-                {t.decor === "strawberry" && (
-                  <DecorEmoji
-                    emoji="🍓"
-                    size="sm"
-                    tilt="right"
-                    className="pointer-events-none absolute bottom-16 right-4"
-                  />
-                )}
-                {t.decor === "gold-heart" && (
-                  <GoldHeart
-                    size={28}
-                    tilt="right"
-                    className="pointer-events-none absolute bottom-14 right-4"
-                  />
-                )}
+                <p className="text-[13px] text-peach-text/60">— {t.name}</p>
               </div>
             ))}
           </div>
@@ -638,25 +616,28 @@ export default function PeachClubPage() {
         className="section-band section-berry-band"
       >
         <div className="section-pad mx-auto max-w-page">
-          <div className="mx-auto flex max-w-3xl flex-col items-center gap-10">
-            <div className="reveal text-center" data-reveal>
-              <p className="section-label-gold mb-3">invest in you</p>
+          <div className="mx-auto flex max-w-5xl flex-col items-center gap-10 lg:flex-row lg:items-center lg:justify-center lg:gap-10 xl:gap-14">
+            <div className="pricing-aside reveal" data-reveal>
+              <p className="section-label-gold">Invest in You</p>
               <h2 className="berry-heading font-serif text-[clamp(1.4rem,2vw,1.85rem)] font-medium leading-[1.2]">
-                a small investment for a lifetime of change.{" "}
-                <DecorEmoji emoji="✨" size="sm" tilt="right" className="emoji-inline" />
+                <span className="block">a small investment</span>
+                <span className="mt-1 block">
+                  for a lifetime of change.{" "}
+                  <DecorEmoji emoji="✨" size="sm" tilt="right" className="emoji-inline" />
+                </span>
               </h2>
             </div>
 
             <div className="grid w-full max-w-[32rem] shrink-0 grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5">
               <div className="pricing-card reveal" data-reveal data-reveal-delay="100">
                 <span className="save-badge">
-                  save
+                  Save
                   <br />
                   £20
                 </span>
                 <div className="pr-14">
                   <p className="mb-1 font-sans text-[11px] font-medium uppercase tracking-[0.15em] text-peach-dot">
-                    early bird
+                    Early Bird
                   </p>
                   <p className="mb-4 text-[13px] text-peach-text/60">
                     Limited to first 5 spaces
@@ -675,10 +656,10 @@ export default function PeachClubPage() {
 
               <div className="pricing-card reveal" data-reveal data-reveal-delay="200">
                 <p className="mb-1 font-sans text-[11px] font-medium uppercase tracking-[0.15em] text-peach-dot">
-                  standard
+                  Standard
                 </p>
                 <p className="mb-4 text-[13px] text-peach-text/60">
-                  regular price
+                  Regular Price
                 </p>
                 <p className="price-display mb-5">£167</p>
                 <ul className="mb-6 flex flex-col gap-2.5">
@@ -689,6 +670,17 @@ export default function PeachClubPage() {
                 <a href="#payment" className="btn-brand-berry-full mt-auto">
                   join now
                 </a>
+              </div>
+            </div>
+
+            <div className="pricing-aside reveal" data-reveal data-reveal-delay="300">
+              <p className="berry-body font-serif text-[clamp(1.5rem,2.4vw,2.35rem)] font-medium leading-[1.15]">
+                <span className="block">you can</span>
+                <span className="mt-1 block">sit with us</span>
+              </p>
+              <div className="flex items-center justify-center gap-2 lg:justify-start">
+                <DecorEmoji emoji="💖" size="sm" tilt="slight-left" />
+                <DecorEmoji emoji="🍑" size="sm" tilt="right" />
               </div>
             </div>
           </div>
@@ -703,23 +695,28 @@ export default function PeachClubPage() {
             data-reveal
           >
             <h2 className="heading-display text-center text-[clamp(1.85rem,3.8vw,2.85rem)] leading-[1.12]">
-              ready to rewrite your story?
+              ready to rewrite your story?{" "}
+              <DecorEmoji emoji="✨" size="sm" tilt="right" className="emoji-inline" />
             </h2>
-            <p className="mt-5 max-w-lg font-serif text-[clamp(1.1rem,2vw,1.35rem)] font-medium leading-[1.5] text-peach-text">
-              stop starting over.
-            </p>
-            <p className="mt-3 max-w-lg text-[15px] leading-[1.75] text-peach-text">
-              start building a healthier, happier and more confident version of
-              yourself.
-            </p>
-            <p className="mt-3 max-w-lg text-[15px] leading-[1.75] text-peach-text">
-              join rewrite your story inside peach club collective today.
+            <p className="mt-5 max-w-lg text-[15px] leading-[1.75] text-peach-text">
+              Stop starting over. Start building a healthier, happier and more
+              confident version of yourself. Join Rewrite Your Story inside Peach
+              Club Collective today.
             </p>
             <div className="mt-8 flex w-full flex-col items-center gap-4">
               <a href="#payment" className="btn-brand-white-lg">
                 <span className="btn-dot" aria-hidden="true" />
                 join now
               </a>
+              <p className="text-center font-serif text-[15px] text-peach-text/70">
+                Your story is waiting.{" "}
+                <DecorEmoji
+                  emoji="💬"
+                  size="sm"
+                  tilt="slight-right"
+                  className="emoji-inline"
+                />
+              </p>
             </div>
           </div>
         </div>
