@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="600" viewBox="0 0 500 600">
+  <rect width="500" height="600" fill="#f5efe8"/>
+  <rect x="24" y="24" width="452" height="552" fill="none" stroke="#2b2b2b" stroke-width="2" stroke-dasharray="12 8"/>
+  <text x="250" y="285" text-anchor="middle" fill="#a33a66" font-family="Georgia, serif" font-size="22" font-weight="500">included-photo.jpg</text>
+  <text x="250" y="320" text-anchor="middle" fill="#423e3e" font-family="Arial, sans-serif" font-size="14">Section 6  What&apos;s included image</text>
+</svg>

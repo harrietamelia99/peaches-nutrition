@@ -3,53 +3,461 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --pill-bg: #ffffff;
+    --border: #2b2b2b;
+    --nav-colour: #423e3e;
+    --cta-text: #3b3532;
+    --peach-1: #f6e9f4;
+    --peach-2: #fcfcf9;
+    --peach-3: #e4c5df;
+    --peach-4: #a23565;
+    --dot: #a23565;
+    --gold-light: #fff9f0;
+    --gold-mid: #ead3b3;
+    --gold-deep: #e1c9a2;
+    --gold-1: #ead3b3;
+    --gold-2: #fff9f0;
+    --gold-3: #e1c9a2;
+    --lavender: #e4c5df;
+    --pale: #fcfcf9;
+    --berry-dark: #8a2a52;
+    --cta-letter: -0.02em;
+    --cta-size: 20px;
+  }
+
   html {
     scroll-behavior: smooth;
   }
 
   body {
-    @apply font-sans text-peach-text antialiased;
+    @apply font-sans font-normal antialiased;
+    color: var(--cta-text);
   }
 }
 
 @layer components {
+  /* Thin black band dividers — matches Squarespace section breaks */
+  .section-band {
+    border-top: 1px solid var(--border);
+  }
+
+  .section-band:first-child {
+    border-top: none;
+  }
+
+  .section-pad {
+    @apply px-6 py-section md:px-8 md:py-section-lg lg:px-10;
+  }
+
+  .section-head {
+    @apply mb-7 md:mb-8;
+  }
+
+  .bg-peach-1 {
+    background-color: var(--peach-1);
+  }
+
+  .bg-peach-2 {
+    background-color: var(--peach-2);
+  }
+
+  .bg-peach-3 {
+    background-color: var(--peach-3);
+  }
+
+  .bg-peach-berry {
+    background-color: var(--peach-4);
+  }
+
+  /* Berry band — white headings only; cards reset to dark body text */
+  .section-berry-band {
+    @apply bg-peach-berry;
+  }
+
+  .section-berry-band .section-label {
+    color: var(--gold-mid);
+  }
+
+  .section-berry-band .heading-display,
+  .section-berry-band .berry-heading {
+    color: #ffffff;
+  }
+
+  .section-berry-band .berry-body {
+    color: #ffffff;
+  }
+
   .section-label {
-    @apply font-sans text-xs font-medium uppercase tracking-[0.2em] text-peach-berry;
+    @apply font-sans text-[11px] font-bold uppercase tracking-[0.22em];
+    color: var(--dot);
   }
 
-  .section-label-light {
-    @apply font-sans text-xs font-medium uppercase tracking-[0.2em] text-white/90;
+  .section-label-gold {
+    @apply font-sans text-[11px] font-bold uppercase tracking-[0.22em];
+    color: var(--gold-mid);
   }
 
+  /* Live site gold — 135° cream to tan (buttons, save badge, etc.) */
+  .gold-gradient {
+    background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold-deep) 100%);
+  }
+
+  /* Live site: Fraunces at medium weight, not bold */
   .heading-serif {
-    @apply font-serif font-bold text-peach-charcoal;
+    @apply font-serif font-medium;
+    color: var(--nav-colour);
   }
 
-  .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 rounded-pill bg-peach-berry px-8 py-4 font-serif text-sm font-medium uppercase tracking-wide text-white transition-all duration-300 hover:bg-peach-berry-dark hover:-translate-y-0.5;
+  .heading-display {
+    @apply font-serif font-medium leading-[1.12] tracking-[-0.02em];
+    color: var(--nav-colour);
   }
 
-  .btn-primary-lg {
-    @apply inline-flex items-center justify-center gap-2 rounded-pill bg-peach-berry px-10 py-5 font-serif text-base font-medium uppercase tracking-wide text-white transition-all duration-300 hover:bg-peach-berry-dark hover:-translate-y-0.5;
+  .heading-sub {
+    @apply font-serif text-[clamp(1.15rem,2vw,1.5rem)] font-normal leading-snug;
+    color: var(--nav-colour);
   }
 
-  .btn-join {
-    @apply inline-flex w-full items-center justify-center rounded-pill bg-peach-berry px-6 py-3.5 font-serif text-sm font-medium uppercase tracking-wide text-white transition-all duration-300 hover:bg-peach-berry-dark;
+  .text-accent-serif {
+    @apply font-serif font-medium;
+    color: var(--dot);
+  }
+
+  /* Programme section — grouped heading rhythm + airy body spacing */
+  .programme-headline {
+    @apply font-serif font-medium leading-[1.08] tracking-[-0.02em];
+    color: var(--border);
+    font-size: clamp(1.85rem, 3.2vw, 2.65rem);
+  }
+
+  .programme-subhead {
+    @apply mt-1 font-serif font-medium leading-tight;
+    color: var(--border);
+    font-size: clamp(1.1rem, 2vw, 1.45rem);
+  }
+
+  .programme-body {
+    @apply font-sans text-[15px] font-normal;
+    line-height: 1.65;
+    color: var(--border);
+  }
+
+  .programme-accent {
+    @apply font-serif font-medium;
+    color: var(--dot);
+    font-size: clamp(1.15rem, 2vw, 1.4rem);
+  }
+
+  .btn-dot {
+    @apply h-[15px] w-[15px] shrink-0 rounded-full;
+    background-color: var(--dot);
+  }
+
+  /* Live site — white pill + berry dot (e.g. "get started") */
+  .btn-brand-white {
+    @apply relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-pill border bg-white px-9 py-3.5 font-serif text-btn font-medium normal-case transition-transform duration-300 ease-out hover:-translate-y-0.5;
+    border-color: var(--border);
+    color: var(--cta-text);
+    box-shadow: 0 3px 10px rgba(43, 43, 43, 0.1);
+  }
+
+  .btn-brand-white-lg {
+    @apply btn-brand-white px-10 py-[17px] text-[15px];
+  }
+
+  /* Live site — gold gradient pill (e.g. "about me!" / "book 1-1 coaching!") */
+  .btn-brand-gold {
+    @apply gold-gradient relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-pill border px-9 py-3.5 font-serif text-btn font-medium normal-case transition-transform duration-300 ease-out hover:-translate-y-0.5;
+    border-color: var(--border);
+    color: var(--cta-text);
+    box-shadow: 0 3px 10px rgba(43, 43, 43, 0.1);
+  }
+
+  .btn-brand-gold-lg {
+    @apply btn-brand-gold px-10 py-[17px] text-[15px];
+  }
+
+  .btn-brand-berry {
+    @apply relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-pill px-9 py-3.5 font-serif text-btn font-medium tracking-[-0.02em] text-white normal-case transition-all duration-300 ease-out hover:-translate-y-1;
+    background-color: var(--dot);
+    box-shadow: 0 3px 10px rgba(43, 43, 43, 0.14);
+  }
+
+  .btn-brand-berry:hover {
+    background-color: var(--berry-dark);
+    box-shadow: 0 8px 22px rgba(43, 43, 43, 0.2);
+  }
+
+  .btn-brand-berry-lg {
+    @apply btn-brand-berry px-10 py-[18px] text-[15px] normal-case;
+  }
+
+  .btn-brand-berry-hero {
+    @apply btn-brand-berry px-12 py-[1.125rem] text-[13px] uppercase tracking-[0.18em];
+    box-shadow: 0 4px 16px rgba(43, 43, 43, 0.16);
+  }
+
+  .btn-brand-berry-full {
+    @apply btn-brand-berry w-full px-6 py-3.5 text-[13px] normal-case;
+  }
+
+  .btn-brand-white::after,
+  .btn-brand-gold::after,
+  .btn-brand-berry::after,
+  .btn-brand-berry-lg::after,
+  .btn-brand-berry-hero::after,
+  .btn-brand-berry-full::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+    transition: left 0.6s ease;
+    pointer-events: none;
+  }
+
+  .btn-brand-white:hover::after,
+  .btn-brand-gold:hover::after,
+  .btn-brand-berry:hover::after,
+  .btn-brand-berry-lg:hover::after,
+  .btn-brand-berry-hero:hover::after,
+  .btn-brand-berry-full:hover::after {
+    left: 100%;
   }
 
   .pill-badge {
-    @apply inline-block rounded-pill bg-peach-pink px-5 py-2 font-sans text-sm text-peach-berry;
+    @apply inline-block rounded-pill border px-5 py-2.5 font-sans text-sm font-normal text-white;
+    border-color: var(--border);
+    background-color: #e3c7dd;
   }
 
+  .hero-brand {
+    @apply font-serif text-[15px] font-medium;
+    color: var(--dot);
+  }
+
+  .hero-headline {
+    @apply font-serif font-medium leading-[1.06] tracking-[-0.025em];
+    color: var(--border);
+    font-size: clamp(2.75rem, 5.8vw, 4.5rem);
+  }
+
+  .hero-highlight {
+    @apply inline-block w-fit rounded-[5px] px-3.5 py-2 font-serif text-[clamp(1.05rem,1.9vw,1.4rem)] font-normal leading-snug;
+    background-color: rgba(228, 197, 223, 0.72);
+    color: var(--dot);
+  }
+
+  .hero-body {
+    @apply max-w-sm font-sans text-[15px] font-normal leading-[1.8];
+    color: var(--border);
+  }
+
+  /* Cards: thin black outline, no heavy shadow — matches live site */
   .card-white {
-    @apply rounded-card bg-white p-6 shadow-card md:p-8;
+    @apply rounded-card border bg-white p-5 md:p-6;
+    border-color: var(--border);
+    box-shadow: none;
+    color: var(--cta-text);
+  }
+
+  .hover-lift {
+    @apply transition-all duration-300 ease-out;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 28px rgba(43, 43, 43, 0.1);
+  }
+
+  .image-frame {
+    @apply overflow-hidden rounded-card border;
+    border-color: var(--border);
+    box-shadow: none;
+  }
+
+  .image-placeholder {
+    @apply overflow-hidden rounded-card border;
+    border-color: var(--border);
+    background-color: var(--lavender);
+    box-shadow: none;
+  }
+
+  .image-placeholder-inner {
+    position: absolute;
+    inset: 1.75rem;
+    border: 2px dashed var(--border);
+    border-radius: 14px;
+    pointer-events: none;
   }
 
   .bullet-dot {
-    @apply mt-2 h-2 w-2 shrink-0 rounded-full bg-peach-berry;
+    @apply mt-[7px] h-[7px] w-[7px] shrink-0 rounded-full;
+    background-color: var(--dot);
   }
 
   .check-icon {
-    @apply flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-peach-pink text-sm text-peach-berry;
+    @apply flex h-[22px] w-[22px] shrink-0 items-center justify-center rounded-full text-[11px] font-normal text-white;
+    background-color: var(--dot);
+  }
+
+  .section-faded-grid {
+    background-image:
+      linear-gradient(rgba(43, 43, 43, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(43, 43, 43, 0.04) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+
+  .journey-section {
+    background-color: var(--peach-1);
+  }
+
+  .programme-section {
+    background-color: var(--peach-2);
+  }
+
+  .week-row {
+    @apply hover-lift flex items-center gap-4 rounded-card border bg-white px-5 py-4 md:px-6 md:py-[1.125rem];
+    border-color: var(--border);
+    box-shadow: none;
+    color: var(--cta-text);
+  }
+
+  .week-badge {
+    @apply shrink-0 rounded-lg border px-4 py-2 font-sans text-[11px] font-bold uppercase tracking-[0.06em] text-white;
+    border-color: var(--border);
+    background-color: var(--dot);
+    min-width: 4.75rem;
+    text-align: center;
+  }
+
+  .price-display {
+    @apply font-serif text-[3.25rem] font-medium leading-none;
+    color: var(--nav-colour);
+  }
+
+  .pricing-card {
+    @apply hover-lift relative flex h-full flex-col rounded-card bg-white p-6 md:p-7;
+    border: none;
+    box-shadow: none;
+    color: var(--cta-text);
+  }
+
+  /* Angled emoji stickers — matches Peach Club mockup */
+  .emoji-decor {
+    filter: drop-shadow(3px 5px 6px rgba(43, 43, 43, 0.28));
+    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .gold-heart-decor {
+    filter: drop-shadow(4px 6px 10px rgba(43, 43, 43, 0.4));
+    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .btn-with-heart:hover .gold-heart-decor {
+    transform: scale(1.14) rotate(6deg);
+  }
+
+  .card-hover:hover .emoji-decor {
+    transform: scale(1.08) rotate(-4deg);
+  }
+}
+
+@layer utilities {
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition:
+      opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+    transition-delay: var(--reveal-delay, 0ms);
+  }
+
+  .reveal-left {
+    transform: translateX(-32px);
+  }
+
+  .reveal-right {
+    transform: translateX(32px);
+  }
+
+  .reveal.is-visible,
+  .reveal-left.is-visible,
+  .reveal-right.is-visible {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+
+  .hero-reveal {
+    opacity: 0;
+    animation: hero-enter 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation-delay: var(--hero-delay, 0ms);
+  }
+
+  @keyframes hero-enter {
+    from {
+      opacity: 0;
+      transform: translateY(22px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes hero-enter-right {
+    from {
+      opacity: 0;
+      transform: translateX(36px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .hero-reveal-right {
+    opacity: 0;
+    animation: hero-enter-right 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation-delay: var(--hero-delay, 0ms);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal,
+  .reveal-left,
+  .reveal-right {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .hero-reveal,
+  .hero-reveal-right {
+    opacity: 1;
+    animation: none;
+  }
+
+  .hover-lift:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .btn-brand-berry:hover {
+    transform: none;
+  }
+
+  .btn-with-heart:hover .gold-heart-decor,
+  .card-hover:hover .emoji-decor {
+    transform: none;
   }
 }
