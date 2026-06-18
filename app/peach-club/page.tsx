@@ -325,8 +325,9 @@ export default function PeachClubPage() {
     <main className="overflow-x-hidden">
       <ScrollAnimator />
       {/* ── 1. Hero ───────────────────────────────────────────────────── */}
-      <section className="section-band lg:grid lg:min-h-screen lg:grid-cols-2 lg:items-stretch">
-        <div className="hero-panel bg-peach-1 flex flex-col justify-start gap-5 px-6 pb-4 pt-10 sm:px-10 lg:min-h-0 lg:justify-center lg:px-12 lg:py-12">
+      <section className="section-band bg-peach-1 lg:flex lg:min-h-screen lg:items-center">
+        <div className="section-pad mx-auto grid w-full max-w-page items-center gap-8 md:grid-cols-2 md:gap-10">
+          <div className="flex flex-col justify-start gap-5 lg:justify-center">
           <p
             className="hero-brand hero-reveal flex items-center gap-2"
             style={{ "--hero-delay": "80ms" } as CSSProperties}
@@ -377,20 +378,21 @@ export default function PeachClubPage() {
               join rewrite your story
             </a>
           </div>
-        </div>
-        <div
-          className="hero-reveal-right flex w-full items-center justify-center bg-peach-1 px-6 pb-10 pt-2 sm:px-10 lg:py-12 lg:px-10"
-          style={{ "--hero-delay": "260ms" } as CSSProperties}
-        >
-          <div className="photo-frame relative aspect-[4/5] w-[92%] max-w-[24rem] sm:max-w-[26rem] lg:max-w-[28rem]">
-            <Image
-              src="/images/hero-photo.jpg"
-              alt="Woman in activewear smiling in a cosy living space"
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 50vw"
-              priority
-            />
+          </div>
+          <div
+            className="hero-reveal-right flex w-full items-center justify-center"
+            style={{ "--hero-delay": "260ms" } as CSSProperties}
+          >
+            <div className="photo-frame relative aspect-[4/5] w-full max-w-[24rem] sm:max-w-[26rem] lg:max-w-none">
+              <Image
+                src="/images/hero-photo.jpg"
+                alt="Woman in activewear smiling in a cosy living space"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                priority
+              />
+            </div>
           </div>
         </div>
       </section>
