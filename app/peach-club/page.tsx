@@ -1,6 +1,7 @@
 import Image from "next/image";
 import type { CSSProperties } from "react";
 import { ScrollAnimator } from "@/components/scroll-animator";
+import { TestimonialCard } from "@/components/testimonial-card";
 
 /* ─── Data ─────────────────────────────────────────────────────────────── */
 
@@ -179,18 +180,6 @@ const pricingFeatures = [
 ];
 
 /* ─── Helpers ──────────────────────────────────────────────────────────── */
-
-function Stars() {
-  return (
-    <div className="mb-5 flex gap-0.5" aria-hidden="true">
-      {Array.from({ length: 5 }).map((_, i) => (
-        <span key={i} className="text-base text-peach-pink">
-          ★
-        </span>
-      ))}
-    </div>
-  );
-}
 
 function CheckItem({ children }: { children: string }) {
   return (
@@ -630,21 +619,11 @@ export default function PeachClubPage() {
           </div>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {testimonials.map((t, i) => (
-              <div
+              <TestimonialCard
                 key={i}
-                className="card-white hover-lift reveal flex flex-col"
-                data-reveal
-                data-reveal-delay={String(i * 120)}
-              >
-                <Stars />
-                <p className="mb-5 flex-1 text-[14px] leading-[1.7] text-peach-text">
-                  &ldquo;{t.quote}&rdquo;
-                </p>
-                <p className="mb-5 text-[13px] text-peach-text/60">
-                  — current client
-                </p>
-                <span className="btn-brand-berry-full mt-auto">read more</span>
-              </div>
+                quote={t.quote}
+                revealDelay={i * 120}
+              />
             ))}
           </div>
         </div>
