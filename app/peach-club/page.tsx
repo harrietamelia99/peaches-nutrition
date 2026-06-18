@@ -382,7 +382,7 @@ export default function PeachClubPage() {
           className="hero-reveal-right flex w-full items-center justify-center bg-peach-1 px-6 pb-10 pt-2 sm:px-10 lg:py-12 lg:px-10"
           style={{ "--hero-delay": "260ms" } as CSSProperties}
         >
-          <div className="relative aspect-[4/5] w-[88%] max-w-[22rem] overflow-hidden rounded-card border sm:max-w-[24rem] lg:max-w-[26rem]">
+          <div className="photo-frame relative aspect-[4/5] w-[92%] max-w-[24rem] sm:max-w-[26rem] lg:max-w-[28rem]">
             <Image
               src="/images/hero-photo.jpg"
               alt="Woman in activewear smiling in a cosy living space"
@@ -430,7 +430,7 @@ export default function PeachClubPage() {
             </p>
           </div>
           <div
-            className="reveal reveal-right relative aspect-[4/5] w-full overflow-hidden rounded-card border"
+            className="photo-frame reveal reveal-right relative aspect-[4/5] w-full"
             data-reveal
           >
             <Image

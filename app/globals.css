@@ -280,10 +280,15 @@
   }
 
   .image-placeholder {
-    @apply overflow-hidden rounded-card border;
+    @apply overflow-hidden rounded-card border border-peach-border;
     border-color: var(--border);
     background-color: var(--lavender);
     box-shadow: none;
+  }
+
+  .photo-frame {
+    @apply overflow-hidden rounded-card border border-peach-border;
+    border-color: var(--border);
   }
 
   .image-placeholder-inner {
