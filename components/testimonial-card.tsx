@@ -38,11 +38,9 @@ export function TestimonialCard({
         &ldquo;{quote}&rdquo;
       </p>
       <p className="mb-5 text-[13px] text-peach-text/60">— current client</p>
-      {isLong && (
-        <a href={readMoreHref} className="btn-brand-berry-full mt-auto">
-          read more
-        </a>
-      )}
+      <a href={readMoreHref} className="btn-brand-berry-full mt-auto">
+        read more
+      </a>
     </div>
   );
 }
