@@ -380,7 +380,7 @@ export default function PeachClubPage() {
           className="hero-reveal-right flex w-full items-center justify-center bg-peach-1 px-6 py-10 sm:px-10 lg:min-h-0 lg:py-12 lg:px-10"
           style={{ "--hero-delay": "260ms" } as CSSProperties}
         >
-          <div className="relative aspect-[4/5] w-full overflow-hidden rounded-card border">
+          <div className="relative aspect-[4/5] w-[88%] max-w-[22rem] overflow-hidden rounded-card border sm:max-w-[24rem] lg:max-w-[26rem]">
             <Image
               src="/images/hero-photo.jpg"
               alt="Woman in activewear smiling in a cosy living space"
