@@ -6,6 +6,7 @@ import { TestimonialCard } from "@/components/testimonial-card";
 /* ─── Data ─────────────────────────────────────────────────────────────── */
 
 const contactUrl = "https://www.peachesnutrition.co.uk/contact";
+const siteHomeUrl = "https://www.peachesnutrition.co.uk/";
 
 const programmeOutcomes = [
   "Stop starting over",
@@ -623,6 +624,7 @@ export default function PeachClubPage() {
                 key={i}
                 quote={t.quote}
                 revealDelay={i * 120}
+                readMoreHref={siteHomeUrl}
               />
             ))}
           </div>
