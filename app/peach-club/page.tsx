@@ -398,7 +398,19 @@ export default function PeachClubPage() {
       {/* ── 2. Introducing the Programme ────────────────────────────── */}
       <section className="section-band programme-section section-faded-grid">
         <div className="section-pad mx-auto grid max-w-page items-center gap-8 md:grid-cols-2 md:gap-10">
-          <div className="reveal max-w-xl" data-reveal>
+          <div
+            className="photo-frame reveal reveal-left relative aspect-[4/5] w-full"
+            data-reveal
+          >
+            <Image
+              src="/images/programme-photo.jpg"
+              alt="Woman preparing fresh fruit in the kitchen"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+          </div>
+          <div className="reveal max-w-xl" data-reveal data-reveal-delay="120">
             <p className="section-label mb-4">Introducing the Programme</p>
             <div className="mb-7">
               <h2 className="programme-headline">Rewrite Your Story</h2>
@@ -428,18 +440,6 @@ export default function PeachClubPage() {
               It&apos;s about how you think, what you believe about yourself
               and the habits you practise every day.
             </p>
-          </div>
-          <div
-            className="photo-frame reveal reveal-right relative aspect-[4/5] w-full"
-            data-reveal
-          >
-            <Image
-              src="/images/programme-photo.jpg"
-              alt="Woman preparing fresh fruit in the kitchen"
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 50vw"
-            />
           </div>
         </div>
       </section>
