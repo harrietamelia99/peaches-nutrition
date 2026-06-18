@@ -133,24 +133,42 @@ const includedColumnTwo = [
 
 const testimonials = [
   {
-    name: "Sara",
     quote:
-      "More than a coach, Jem has become a friend for life. If you're stuck in extremes, convinced nothing will work for you, or afraid to be honest about your relationship with food, I couldn't recommend her more.",
+      "You've literally described ME!! I feel so seen and understood xxxx",
   },
   {
-    name: "Lianne",
     quote:
-      "Instead of just giving me another plan, Jem helped me understand what was actually driving my behaviours. We went to the root cause of my triggers in a way I'd never experienced before.",
+      "Thank you, Jem, for all your support, encouragement, and guidance throughout this journey. Your kindness, and expertise have made such a positive difference, and I'm truly grateful for everything you've done to help and motivate me. I really appreciate your constant encouragement and the care you put into supporting everybody 🥰 your just so cute and your go far 🥰🥰 👏👏👏👏 👌👌👌👌 now get this food book out 🥳🥳 👏👏👏👏",
   },
   {
-    name: "Emma",
     quote:
-      "I never once felt judged. I could be fully myself and completely honest with her, there was never a moment where I felt like I had to hold something back.",
+      "And that is why you are so amazing and literally change people's lives, in the few short weeks that we've been communicating you have helped me more than anyone I've ever spoken to and I am forever grateful to you, because I know this is, and will continue to change my life and I'm so certain I can be binge free one day ❤️ from the bottom of my heart, thank you xxxxx",
   },
   {
-    name: "Jade",
     quote:
-      "I was honestly so skeptical going into this. I thought a lot of this stuff was bullsh*t. But Jem completely changed my perspective. She's warm, kind, and feels like sunshine in a cup.",
+      "Honestly Jem I can't begin to thank you enough! Today's win already, I put on my shorts and felt really self conscious of my loose skin and wobbly bits, but thought what's the worst than can happen, kept them on and went to the shops and to my surprise no one gasped in horror at my legs!! Is this a little bit of confidence peeking in I wonder.... The reality of losing a huge amount of weight is people thinking that's the hard part done, so very wrong in my case that was the easy part, the hard part is actually accepting the body im left with. But I'm learning to love and respect it ❤️",
+  },
+  {
+    quote: "Learnt - accountability works",
+  },
+  {
+    quote: "Future Me - will be happy I went with the yog bowl!",
+  },
+  {
+    quote:
+      "the motivation but the biggest thing I've taken from this is I'm not alone. I suffer terribly with anxiety and feel that sometimes I miss out on so much. I think I just need to live for today and enjoy every moment ❤️",
+  },
+  {
+    quote:
+      "Thanks so much Jem! I've loved being part of this group. It's really shifted my mindset and made me think more about the food I'm consuming.",
+  },
+  {
+    quote:
+      "I've loved this group, I feel it's really helped navigate a really tricky time for me, it's felt a safe space, it's nice to have others support and celebrate the wins in life no matter how big or small, I've learned that I am brave, and strong and I can do hard things!! I genuinely feel if I didn't have this support my binge eating would have completely taken over this week! Yes I had a little wobble last week, but this one I've remained strong and In control and I feel so much better for it! Jem, I can't thank you enough, every message, voice note and notion of support has been so valuable and appreciated, you are a wonderful human! Xxx",
+  },
+  {
+    quote:
+      "Steak didn't happen as got home late with the dog, literally no steps today, BUT...... I STAYED BINGE FREEEEEEEE 😍😍😍😍😍",
   },
 ];
 
@@ -613,17 +631,17 @@ export default function PeachClubPage() {
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {testimonials.map((t, i) => (
               <div
-                key={t.name}
+                key={i}
                 className="card-white hover-lift reveal flex flex-col"
                 data-reveal
                 data-reveal-delay={String(i * 120)}
               >
                 <Stars />
-                <p className="mb-3 font-serif text-[1.1rem] font-semibold text-peach-charcoal">
-                  {t.name}
-                </p>
                 <p className="mb-5 flex-1 text-[14px] leading-[1.7] text-peach-text">
-                  {t.quote}
+                  &ldquo;{t.quote}&rdquo;
+                </p>
+                <p className="mb-5 text-[13px] text-peach-text/60">
+                  — current client
                 </p>
                 <span className="btn-brand-berry-full mt-auto">read more</span>
               </div>
