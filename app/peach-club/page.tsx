@@ -4,6 +4,8 @@ import { ScrollAnimator } from "@/components/scroll-animator";
 
 /* ─── Data ─────────────────────────────────────────────────────────────── */
 
+const contactUrl = "https://www.peachesnutrition.co.uk/contact";
+
 const programmeOutcomes = [
   "Stop starting over",
   "Improve their relationship with food",
@@ -323,8 +325,8 @@ export default function PeachClubPage() {
     <main className="overflow-x-hidden">
       <ScrollAnimator />
       {/* ── 1. Hero ───────────────────────────────────────────────────── */}
-      <section className="section-band min-h-screen lg:grid lg:grid-cols-2 lg:items-stretch">
-        <div className="hero-panel bg-peach-1 flex min-h-screen flex-col justify-center gap-5 px-6 py-10 sm:px-10 lg:min-h-0 lg:px-12 lg:py-12">
+      <section className="section-band lg:grid lg:min-h-screen lg:grid-cols-2 lg:items-stretch">
+        <div className="hero-panel bg-peach-1 flex flex-col justify-start gap-5 px-6 pb-4 pt-10 sm:px-10 lg:min-h-0 lg:justify-center lg:px-12 lg:py-12">
           <p
             className="hero-brand hero-reveal flex items-center gap-2"
             style={{ "--hero-delay": "80ms" } as CSSProperties}
@@ -370,14 +372,14 @@ export default function PeachClubPage() {
             className="hero-reveal pt-1"
             style={{ "--hero-delay": "540ms" } as CSSProperties}
           >
-            <a href="#payment" className="btn-brand-white-lg">
+            <a href={contactUrl} className="btn-brand-white-lg">
               <span className="btn-dot" aria-hidden="true" />
               join rewrite your story
             </a>
           </div>
         </div>
         <div
-          className="hero-reveal-right flex w-full items-center justify-center bg-peach-1 px-6 py-10 sm:px-10 lg:min-h-0 lg:py-12 lg:px-10"
+          className="hero-reveal-right flex w-full items-center justify-center bg-peach-1 px-6 pb-10 pt-2 sm:px-10 lg:py-12 lg:px-10"
           style={{ "--hero-delay": "260ms" } as CSSProperties}
         >
           <div className="relative aspect-[4/5] w-[88%] max-w-[22rem] overflow-hidden rounded-card border sm:max-w-[24rem] lg:max-w-[26rem]">
@@ -667,7 +669,7 @@ export default function PeachClubPage() {
                     <CheckItem key={`early-${f}`}>{f}</CheckItem>
                   ))}
                 </ul>
-                <a href="#payment" className="btn-brand-berry-full mt-auto">
+                <a href={contactUrl} className="btn-brand-berry-full mt-auto">
                   join now
                 </a>
               </div>
@@ -685,7 +687,7 @@ export default function PeachClubPage() {
                     <CheckItem key={`std-${f}`}>{f}</CheckItem>
                   ))}
                 </ul>
-                <a href="#payment" className="btn-brand-berry-full mt-auto">
+                <a href={contactUrl} className="btn-brand-berry-full mt-auto">
                   join now
                 </a>
               </div>
@@ -722,7 +724,7 @@ export default function PeachClubPage() {
               Club Collective today.
             </p>
             <div className="mt-8 flex w-full flex-col items-center gap-4">
-              <a href="#payment" className="btn-brand-white-lg">
+              <a href={contactUrl} className="btn-brand-white-lg">
                 <span className="btn-dot" aria-hidden="true" />
                 join now
               </a>
