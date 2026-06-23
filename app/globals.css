@@ -361,6 +361,87 @@
     @apply flex w-full flex-col justify-center gap-3 text-center lg:w-[11.5rem] lg:shrink-0 lg:text-left;
   }
 
+  .coaching-package-card {
+    @apply flex h-full flex-col overflow-hidden rounded-t-[2.75rem] border bg-white px-6 py-8 text-center sm:px-8 sm:py-10;
+    border-color: var(--border);
+  }
+
+  .coaching-package-label {
+    @apply mb-3 font-serif text-[clamp(1.5rem,2.4vw,2rem)] font-medium leading-none text-peach-dot;
+  }
+
+  .coaching-package-title {
+    @apply mb-6 font-serif text-[clamp(1.35rem,2.2vw,1.85rem)] font-medium leading-[1.15] text-peach-dot;
+  }
+
+  .coaching-package-lead {
+    @apply mb-4 text-[15px] font-medium leading-relaxed text-peach-charcoal;
+  }
+
+  .coaching-package-body {
+    @apply mb-2 text-[15px] leading-relaxed text-peach-text;
+  }
+
+  .coaching-accordion-row {
+    @apply border-t;
+    border-color: rgba(43, 43, 43, 0.18);
+  }
+
+  .coaching-accordion-trigger {
+    @apply flex w-full items-center justify-center gap-3 py-5 font-serif text-[clamp(1.05rem,1.8vw,1.25rem)] font-medium text-peach-charcoal transition-colors duration-200;
+  }
+
+  .coaching-accordion-trigger:hover {
+    color: var(--dot);
+  }
+
+  .coaching-accordion-chevron {
+    @apply text-[1.1rem] leading-none text-peach-charcoal;
+  }
+
+  .coaching-accordion-panel {
+    @apply pb-6;
+  }
+
+  .coaching-included-list {
+    @apply mx-auto flex max-w-[18rem] flex-col gap-2 text-left text-[14px] leading-relaxed text-peach-text;
+  }
+
+  .coaching-included-list li {
+    @apply relative pl-4;
+  }
+
+  .coaching-included-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--dot);
+  }
+
+  .coaching-pricing-list {
+    @apply flex flex-col gap-5;
+  }
+
+  .coaching-pricing-tier {
+    @apply block transition-opacity duration-200 hover:opacity-80;
+  }
+
+  .coaching-pricing-line {
+    @apply font-sans text-[15px] leading-relaxed text-peach-charcoal;
+  }
+
+  .coaching-pricing-duration {
+    @apply font-serif text-[1.05rem] font-medium;
+  }
+
+  .coaching-pricing-subline {
+    @apply mt-1 font-sans text-[14px] text-peach-text;
+  }
+
+  .coaching-pricing-footnote {
+    @apply mt-6 text-[14px] leading-relaxed text-peach-text;
+  }
+
   /* Angled emoji stickers — matches Peach Club mockup */
   .emoji-decor {
     filter: drop-shadow(3px 5px 6px rgba(43, 43, 43, 0.28));

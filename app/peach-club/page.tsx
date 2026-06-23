@@ -1,12 +1,14 @@
 import Image from "next/image";
 import type { CSSProperties } from "react";
+import { CoachingPackageCard } from "@/components/coaching-package-card";
 import { ScrollAnimator } from "@/components/scroll-animator";
 import { TestimonialCard } from "@/components/testimonial-card";
+import { paymentLinks } from "@/lib/payment-links";
 
 /* ─── Data ─────────────────────────────────────────────────────────────── */
 
-const contactUrl = "https://www.peachesnutrition.co.uk/contact";
 const siteHomeUrl = "https://www.peachesnutrition.co.uk/";
+const paymentSectionUrl = "#payment";
 
 const programmeOutcomes = [
   "Stop starting over",
@@ -81,56 +83,134 @@ const pillars = [
 const weeks = [
   {
     number: 1,
-    title: "The Reset Era",
+    title: "The Reset Era ✨",
     description:
-      "Awareness before change. Balanced meals, protein, fibre, gut health, hunger & fullness and breaking the binge-restrict cycle.",
+      "Awareness before change. Balanced meals, protein, fibre, hunger & fullness and breaking the binge-restrict cycle.",
   },
   {
     number: 2,
-    title: "Food, Feelings & Self Trust",
+    title: "Food, Feelings & Self Trust 💕",
     description:
       "Emotional eating, food guilt, mindfulness and rebuilding trust around food.",
   },
   {
     number: 3,
-    title: "The Female Body",
+    title: "The Female Body 🌸",
     description:
       "Hormones, periods, perimenopause, stress, energy and understanding your body better.",
   },
   {
     number: 4,
-    title: "Becoming Her",
+    title: "Becoming Her 🦋",
     description:
-      "Identity change, habits, confidence and becoming the woman you keep saying you want to be.",
+      "Identity change, habits, confidence, self-worth and becoming the woman you keep saying you want to be.",
   },
   {
     number: 5,
-    title: "Main Character Energy",
+    title: "Gut Health & Levelling Up Nutrition 🥗",
     description:
-      "Self-worth, confidence, boundaries, movement and showing up for yourself.",
+      "Gut health foundations, levelling up your nutrition, building on everything so far and making sustainable choices in real life.",
   },
   {
     number: 6,
-    title: "Peach State of Mind",
+    title: "Peach State of Mind 🍑",
     description:
-      "Maintenance mindset, weekends, holidays and making this your new normal.",
+      "Main character energy, maintenance mindset, boundaries, movement, weekends, holidays and making this your new normal.",
   },
 ];
 
 const includedColumnOne = [
-  "6 weeks of nutrition & mindset coaching",
-  "Private WhatsApp community",
-  "Daily accountability and Peach Checks",
-  "Weekly coaching themes",
-  "Educational resources",
+  "6 weeks of nutrition & mindset coaching 🧠",
+  "Private WhatsApp community 💬",
+  "Weekly coaching themes ✨",
+  "Educational resources 📚",
 ];
 
 const includedColumnTwo = [
-  "Recipe Vault",
-  "Coach Peach Pep Talks",
-  "Nutrition, mindset and habit-building tools",
-  "Community support from like-minded women",
-  "Direct support from me",
+  "Recipe Vault 🍽️",
+  "Nutrition, mindset and habit-building tools 🛠️",
+  "Community support from like-minded women 🤍",
+  "Direct support from me 💖",
+];
+
+const coachingPackages = [
+  {
+    label: "01",
+    title: "the promise plan",
+    lead:
+      "For women who want structure, accountability and real results, without overwhelm.",
+    body:
+      "This is your foundation package. We focus on consistency, habit change and building momentum that actually lasts",
+    included: [
+      "Daily WhatsApp support",
+      "Personalised nutrition targets",
+      "Bespoke habit-based plan",
+      "1 x 45 minute deep dive coaching call per month",
+      "Weekly check-in form with personalised feedback",
+      "Adjustments to calories, habits or strategy as needed",
+      "Recipe ideas and simple meal structure guidance",
+      "Progress tracking and reflection prompts",
+      "Mindset support around all-or-nothing thinking",
+    ],
+    tiers: [
+      {
+        duration: "1 month",
+        price: "£179",
+        href: paymentLinks.coaching.promise.oneMonth,
+      },
+      {
+        duration: "2 months",
+        price: "– £329 total",
+        subline: "£165 per month",
+        href: paymentLinks.coaching.promise.twoMonths,
+      },
+      {
+        duration: "3 months",
+        price: "– £449 total",
+        subline: "£150 per month",
+        href: paymentLinks.coaching.promise.threeMonths,
+      },
+    ],
+    footnote: "3 months recommended for full results.",
+  },
+  {
+    label: "02",
+    title: "the 'become her' method",
+    lead:
+      "For women who want greater accountability and deeper, more personalised support.",
+    body:
+      "This is for you if you want a more hands-on, high-touch level of support with closer guidance and deeper accountability each week.",
+    included: [
+      "Includes everything in The Promise Plan, plus:",
+      "Weekly 30 minute coaching calls",
+      "Deeper mindset and identity work",
+      "Real-time strategy adjustments",
+      "More hands-on accountability",
+      "Ongoing habit refinement",
+      "Extra support navigating social events, stress or emotional eating",
+    ],
+    tiers: [
+      {
+        duration: "1 month",
+        price: "£199",
+        href: paymentLinks.coaching.becomeHer.oneMonth,
+      },
+      {
+        duration: "2 months",
+        price: "– £329 total",
+        subline: "£184.50 per month",
+        href: paymentLinks.coaching.becomeHer.twoMonths,
+      },
+      {
+        duration: "3 months",
+        price: "– £500 total",
+        subline: "£167 per month",
+        href: paymentLinks.coaching.becomeHer.threeMonths,
+      },
+    ],
+    footnote:
+      "Perfect for women who feel ready for more consistent support and closer guidance.",
+  },
 ];
 
 const testimonials = [
@@ -381,9 +461,9 @@ export default function PeachClubPage() {
             className="hero-reveal pt-1"
             style={{ "--hero-delay": "540ms" } as CSSProperties}
           >
-            <a href={contactUrl} className="btn-brand-white-lg">
+            <a href={paymentSectionUrl} className="btn-brand-white-lg">
               <span className="btn-dot" aria-hidden="true" />
-              join rewrite your story
+              join rewrite your story ✨
             </a>
           </div>
           </div>
@@ -405,6 +485,37 @@ export default function PeachClubPage() {
         </div>
       </section>
 
+      {/* ── 1b. Community Intro ─────────────────────────────────────── */}
+      <section className="section-band bg-peach-2">
+        <div className="section-pad mx-auto max-w-page">
+          <div
+            className="reveal mx-auto flex max-w-3xl flex-col items-center text-center"
+            data-reveal
+          >
+            <p className="section-label mb-4">
+              Peach Club Collective{" "}
+              <DecorEmoji emoji="🍑" size="sm" tilt="right" className="emoji-inline" />
+              <DecorEmoji emoji="💕" size="sm" tilt="slight-left" className="emoji-inline" />
+            </p>
+            <h2 className="heading-display text-center text-[clamp(1.75rem,3.5vw,2.5rem)]">
+              a warm community for women who are done starting over{" "}
+              <DecorEmoji emoji="🤍" size="sm" tilt="right" className="emoji-inline" />
+            </h2>
+            <p className="mt-5 text-[15px] leading-[1.75] text-peach-text">
+              Peach Club Collective is a supportive women&apos;s nutrition and
+              mindset community — a safe space to learn, grow and feel held
+              alongside like-minded women who get it. No judgement, no
+              comparison, no perfection. Just real-life support, encouragement
+              and women rewriting their stories together.{" "}
+              <DecorEmoji emoji="✨" size="sm" tilt="slight-right" className="emoji-inline" />
+            </p>
+            <p className="mt-4 font-serif text-[1.05rem] font-medium text-peach-dot">
+              Rewrite Your Story is the signature 6-week experience inside it. 🩷
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* ── 2. Introducing the Programme ────────────────────────────── */}
       <section className="section-band programme-section section-faded-grid">
         <div className="section-pad mx-auto grid max-w-page items-center gap-8 md:grid-cols-2 md:gap-10">
@@ -421,7 +532,9 @@ export default function PeachClubPage() {
             />
           </div>
           <div className="reveal max-w-xl" data-reveal data-reveal-delay="120">
-            <p className="section-label mb-4">Introducing the Programme</p>
+            <p className="section-label mb-4">
+              Introducing the Programme ✨
+            </p>
             <div className="mb-7">
               <h2 className="programme-headline">Rewrite Your Story</h2>
               <p className="programme-subhead">
@@ -458,7 +571,7 @@ export default function PeachClubPage() {
       <section className="section-band bg-peach-3">
         <div className="section-pad mx-auto max-w-page">
           <div className="reveal section-head text-center" data-reveal>
-            <p className="section-label mb-4">Who It&apos;s For</p>
+            <p className="section-label mb-4">Who It&apos;s For 💕</p>
             <h2 className="heading-display text-center text-[clamp(1.75rem,3.5vw,2.5rem)]">
               rewrite your story is designed for women who:
             </h2>
@@ -486,7 +599,7 @@ export default function PeachClubPage() {
       <section className="section-band section-berry-band">
         <div className="section-pad mx-auto max-w-page">
           <div className="reveal section-head text-center" data-reveal>
-            <p className="section-label mb-4">The Method</p>
+            <p className="section-label mb-4">The Method 🧠</p>
             <h2 className="heading-display text-center text-[clamp(1.75rem,3.5vw,2.5rem)] text-white">
               four pillars. one you.{" "}
               <DecorEmoji emoji="✨" size="sm" tilt="right" className="emoji-inline" />
@@ -525,7 +638,7 @@ export default function PeachClubPage() {
       <section className="section-band journey-section section-faded-grid">
         <div className="section-pad mx-auto grid max-w-page items-start gap-8 md:grid-cols-[minmax(0,0.95fr)_minmax(0,2.05fr)] md:gap-x-12 lg:gap-x-14">
           <div className="reveal flex flex-col gap-4 md:pt-1" data-reveal>
-            <p className="section-label">The 6-Week Journey</p>
+            <p className="section-label">The 6-Week Journey 🗓️</p>
             <h2 className="heading-display text-[clamp(2rem,4vw,3.1rem)] leading-[1.12]">
               <span className="block">Your story</span>
               <span className="mt-0.5 block">
@@ -575,7 +688,7 @@ export default function PeachClubPage() {
             data-reveal
           >
             <p className="section-label sm:col-span-2 md:col-span-1 md:col-start-1 md:row-start-1">
-              What&apos;s Included
+              What&apos;s Included 🎁
             </p>
 
             <div className="sm:col-span-2 md:col-span-1 md:col-start-1 md:row-start-2">
@@ -607,7 +720,7 @@ export default function PeachClubPage() {
       <section className="section-band bg-peach-3">
         <div className="section-pad mx-auto max-w-page">
           <div className="reveal section-head text-center" data-reveal>
-            <p className="section-label mb-4">Client Testimonials</p>
+            <p className="section-label mb-4">Client Testimonials 💬</p>
             <h2 className="heading-display text-center text-[clamp(1.75rem,3.5vw,2.5rem)]">
               don&apos;t just take our word for it{" "}
               <DecorEmoji
@@ -639,7 +752,7 @@ export default function PeachClubPage() {
         <div className="section-pad mx-auto max-w-page">
           <div className="mx-auto flex max-w-5xl flex-col items-center gap-10 lg:flex-row lg:items-center lg:justify-center lg:gap-10 xl:gap-14">
             <div className="pricing-aside reveal" data-reveal>
-              <p className="section-label-gold">Invest in You</p>
+              <p className="section-label-gold">Invest in You 🩷</p>
               <h2 className="berry-heading font-serif text-[clamp(1.4rem,2vw,1.85rem)] font-medium leading-[1.2]">
                 <span className="block">a small investment</span>
                 <span className="mt-1 block">
@@ -670,8 +783,11 @@ export default function PeachClubPage() {
                     <CheckItem key={`early-${f}`}>{f}</CheckItem>
                   ))}
                 </ul>
-                <a href={contactUrl} className="btn-brand-berry-full mt-auto">
-                  join now
+                <a
+                  href={paymentLinks.programme.earlyBird}
+                  className="btn-brand-berry-full mt-auto"
+                >
+                  join now ✨
                 </a>
               </div>
 
@@ -688,8 +804,11 @@ export default function PeachClubPage() {
                     <CheckItem key={`std-${f}`}>{f}</CheckItem>
                   ))}
                 </ul>
-                <a href={contactUrl} className="btn-brand-berry-full mt-auto">
-                  join now
+                <a
+                  href={paymentLinks.programme.standard}
+                  className="btn-brand-berry-full mt-auto"
+                >
+                  join now ✨
                 </a>
               </div>
             </div>
@@ -708,7 +827,41 @@ export default function PeachClubPage() {
         </div>
       </section>
 
-      {/* ── 9. Final CTA ────────────────────────────────────────────── */}
+      {/* ── 9. 1:1 Coaching ─────────────────────────────────────────── */}
+      <section id="coaching" className="section-band bg-peach-3">
+        <div className="section-pad mx-auto max-w-page">
+          <div className="reveal section-head text-center" data-reveal>
+            <p className="section-label mb-4">1:1 Coaching 🤍</p>
+            <h2 className="heading-display text-center text-[clamp(1.75rem,3.5vw,2.5rem)]">
+              want to go deeper with me?{" "}
+              <DecorEmoji emoji="✨" size="sm" tilt="right" className="emoji-inline" />
+            </h2>
+            <p className="mx-auto mt-5 max-w-2xl text-[15px] leading-[1.75] text-peach-text">
+              Loved the community vibe but ready for personalised support?
+              Choose the 1:1 package that fits you — fully tailored nutrition,
+              daily accountability and coaching built around your life. 🩷
+            </p>
+          </div>
+
+          <div className="mt-10 grid gap-6 lg:grid-cols-2 lg:gap-8">
+            {coachingPackages.map((pkg, i) => (
+              <CoachingPackageCard
+                key={pkg.title}
+                label={pkg.label}
+                title={pkg.title}
+                lead={pkg.lead}
+                body={pkg.body}
+                included={pkg.included}
+                tiers={pkg.tiers}
+                footnote={pkg.footnote}
+                revealDelay={i * 120}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── 10. Final CTA ───────────────────────────────────────────── */}
       <section className="section-band bg-peach-1">
         <div className="section-pad mx-auto max-w-page">
           <div
@@ -725,9 +878,9 @@ export default function PeachClubPage() {
               Club Collective today.
             </p>
             <div className="mt-8 flex w-full flex-col items-center gap-4">
-              <a href={contactUrl} className="btn-brand-white-lg">
+              <a href={paymentSectionUrl} className="btn-brand-white-lg">
                 <span className="btn-dot" aria-hidden="true" />
-                join now
+                join now ✨
               </a>
               <p className="text-center font-serif text-[15px] text-peach-text/70">
                 Your story is waiting.{" "}
