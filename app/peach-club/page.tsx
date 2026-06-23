@@ -197,7 +197,7 @@ const coachingPackages = [
       },
       {
         duration: "2 months",
-        price: "– £329 total",
+        price: "– £369 total",
         subline: "£184.50 per month",
         href: paymentLinks.coaching.becomeHer.twoMonths,
       },

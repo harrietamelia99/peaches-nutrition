@@ -103,7 +103,7 @@ export function CoachingPackageCard({
       >
         <div className="coaching-pricing-list">
           {tiers.map((tier) => (
-            <a key={tier.duration} href={tier.href} className="coaching-pricing-tier">
+            <div key={tier.duration} className="coaching-pricing-tier">
               <p className="coaching-pricing-line">
                 <span className="coaching-pricing-duration">{tier.duration}</span>{" "}
                 {tier.price}
@@ -111,7 +111,10 @@ export function CoachingPackageCard({
               {tier.subline ? (
                 <p className="coaching-pricing-subline">({tier.subline})</p>
               ) : null}
-            </a>
+              <a href={tier.href} className="btn-brand-gold coaching-tier-cta">
+                get started
+              </a>
+            </div>
           ))}
         </div>
         <p className="coaching-pricing-footnote">{footnote}</p>
